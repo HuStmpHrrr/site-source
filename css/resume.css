@@ -47,6 +47,10 @@ p.lead {
   font-weight: 400;
 }
 
+p.writing {
+    font-size: 1.25rem;
+}
+
 .subheading {
   text-transform: uppercase;
   font-weight: 500;
@@ -176,11 +180,11 @@ section.resume-section .resume-item .resume-date {
 }
 
 .bg-primary {
-  background-color: #BD5D38 !important;
+  background-color: #32A4D4 !important;
 }
 
 .text-primary {
-  color: #BD5D38 !important;
+  color: #32A4D4 !important;
 }
 
 a {

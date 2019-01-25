@@ -1,0 +1,123 @@
+first: Jason
+last: Hu
+alias: Zhong Sheng
+emails:
+  - use: personal
+    address: fdhzs2010@hotmail.com
+  - use: school
+    address: zs2hu@uwaterloo.ca
+social:
+  linkedin: https://www.linkedin.com/in/jasonhuzs/
+  github: https://github.com/HuStmpHrrr
+  gitlab: https://gitlab.com/JasonHuZS
+description: >-
+  I am currently a grad student at <a href="https://plg.uwaterloo.ca/">University of
+  Waterloo</a>, under the supervision of Professor <a
+  href="https://plg.uwaterloo.ca/~olhotak/">Ondřej Lhoták</a>. Before that, I worked
+  in the industry since 2014. My undergrad was at <a
+  href="http://www.fudan.edu.cn/en/">Fudan University</a>.
+
+  These days, I am mainly working on programming languages and formal proofs using
+  proof assistants based on Martin-Löf type theory, e.g. <a
+  href="https://coq.inria.fr/">Coq</a> and <a
+  href="https://agda.readthedocs.io/en/v2.5.4.2/">Agda</a>. I am particularly
+  interested in various type theories and the mathematics behind them. Before heading
+  back to school, I worked on a number of projects involving performance engineering,
+  configurations, and others that you might expect to see in the industry. Back in my
+  old days at Fudan University, I was more of a robotic guy.
+
+  My WIP master's thesis project is on <a
+  href="https://gitlab.com/JasonHuZS/AlgDotCalculus">algorithmic typing of DOT</a>.
+
+education:
+  - school: University of Waterloo
+    location: Waterloo, ON
+    degree: Master of Mathematics
+    subject: Computer Science
+    grade: 94.4/100
+    span:
+      from:
+        month: 9
+        year: 2017
+      to: present
+  - school: Fudan University
+    location: Shanghai, China
+    degree: Bachelor of Science
+    subject: Electronic Engineering
+    grade: 3.35/4.0
+    span:
+      from:
+        month: 9
+        year: 2010
+      to:
+        month: 7
+        year: 2014
+
+industry:
+  - company: Morgan Stanley Services Canada Corp.
+    location: Montreal, QC
+    position: Summer Analyst Intern
+    span:
+      from:
+        month: 5
+        year: 2018
+      to:
+        month: 8
+        year: 2018
+  - company: Morgan Stanley Services Canada Corp.
+    location: Montreal, QC
+    position: Java / Scala Developer
+    span:
+      from:
+        month: 10
+        year: 2015
+      to:
+        month: 7
+        year: 2017
+  - company: Nexsan Technologies
+    location: Dorval, QC
+    position: Software Developer
+    span:
+      from:
+        month: 8
+        year: 2014
+      to:
+        month: 10
+        year: 2015
+  - company: Gridsum Technologies
+    location: Shanghai, China
+    position: .Net Engineer Intern
+    span:
+      from:
+        month: 5
+        year: 2014
+      to:
+        month: 6
+        year: 2014
+  - company: Virtuos
+    location: Shanghai, China
+    position: QA Intern
+    span:
+      from:
+        month: 7
+        year: 2013
+      to:
+        month: 8
+        year: 2013
+
+others: >-
+  I speak four languages: English, Mandarin, Cantonese and Japanese.
+
+  I had 6 years of math, 2 years of physics and 1 year of chemistry olympiads experience.
+
+  I am a Cantonese. My town is <a
+  href="https://en.wikipedia.org/wiki/Foshan">Foshan</a>. Warning: I've got no idea
+  how to perform <a href="https://en.wikipedia.org/wiki/Wing_Chun">Wing Chun</a>.
+      
+interests: >-
+  I like superheroes, Marvel, DC and whatever you can name.
+
+  I used to play badminton during undergrad at Fudan with friends, but it turns out
+  that it's hard to even find a reasonable court and shop for maintenance in Canada!
+
+  I have lots of video games in my Steam library, and I dream to have time to play!
