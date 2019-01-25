@@ -1,0 +1,249 @@
+---
+layout: post
+categories: blog
+tags: scala functor haskell
+title: Scala Map#map being problematic
+---
+
+As we know, in vanilla Scala, `Functor`, `Monad` and `MonadPlus` have no unified interface binding
+but just a simple set of naming convention. For instance, a class having `#map` defined will be
+provided syntactical sugar when `#map` is used, so will be `#filter`, `#flatMap` and `#foreach`. 
+
+Regardless those obvious problems when we don't have unified interface among functors, sometimes 
+the problems can be subtle: scala programmers sometimes tend to be unnecessarily strict for some
+problems, but ignore some actual ones. For example, the functor defined in `Map[K, V]` is very
+problematic, as this definition cannot satisfy functor laws.
+
+## the Functor laws
+
+In the first place, let's take a look at how we define `Functor` in haskell:
+
+```haskell
+class Functor f where
+    fmap :: (a -> b) -> f a -> f b
+```
+
+and the implementation of `fmap` needs to satisfy 2 laws:
+
+1. identity: `fmap id == id`
+1. composition: `fmap (f . g) == fmap f . fmap g`
+
+otherwise, the implementation implies a problem and later on some expectations of functor behaviors
+will fail.
+
+## Verifications
+
+Let's verify. identity law says the result of `fmap` of `id`(identity function) needs to be identity.
+Apparently it trivially holds for `Map[K, V]`, as during an iteration, we guarantee all `K`s will be 
+uniq and if we don't alter them and the values, the map will remain the same.
+
+What about the second law, composition law, which says the result of `fmap` of a composition of 2 
+functions should be equivalence of `fmap`ping them individually and compose them afterwards? Hmm..,
+this already looks suspecious already. A counterexample can be easily raised:
+
+Let's assume the concrete `Map[K, V]` implementation will be some `TreeMap[K, V]`, such that for each
+instance of `K`, there will be no more than 1 in the `Map`. Then let's take a closer look at following 
+`Map`:
+
+```scala
+val m = Map(1 -> 1, 2 -> 2, 3 -> 3)
+```
+
+and 2 functions will be:
+
+```scala
+def f(t: (Int, Int)) = (if (t._1 == 3) 1 else t._1, t._2)
+def g(t: (Int, Int)) = (1, t._2 + 1)
+```
+
+As we can see, first function `f` turns 3 into 1, and `g` turns all keys into 1. And for the sake of comparison,
+we will have to assume the order of pairs being iterated, and that will be `(1, 1)`, `(2, 2)` and then `(3, 3)`.
+Then here we go:
+
+```scala
+m map ((f _) andThen (g _))
+```
+
+has
+
+```
+(1, 1) => (1, 1) => (1, 2)
+(2, 2) => (2, 2) => (2, 3)
+(3, 3) => (1, 3) => (1, 4)
+```
+
+As we only call `#map` once with an assumption of the iteration order, it's very clear that what's gonna return, i.e.
+
+```scala
+Map(1, 4)
+```
+
+which comes from the pair of `(3, 3)`.
+
+However, if we do it in following way:
+
+```scala
+m map f map g
+```
+
+then
+
+```
+(1, 1) => (1, 1)
+(2, 2) => (2, 2)
+(3, 3) => (1, 3)
+```
+
+for the 1st `#map` and it should yield an intermediate `Map(2 -> 2, 1 -> 3)`. Let's further assume the iteration order
+for this new `Map` be `(1, 3)` then `(2, 2)`, then we will have
+
+```
+(1, 3) => (1, 4)
+(2, 2) => (1, 3)
+```
+
+hence we yield a `Map(1 -> 3)`, which goes totally against the previous result.
+
+
+## Analysis based on assumptions
+
+The reason for the problem of composition law not holding inlines the assumptions I was making.
+
+1. This is a `Map` that comes with a `Set` semantic implementation
+1. The order of iteration
+
+Please look close, and let's destroy both assumptions one by one.
+
+What if `Map` somehow doesn't throw away duplicated `K`s? In this case, there are chances for `Map#map` to behave
+correctly without changing the code, in the sense of composition law is maintained. For instance, in Scala, `ListMap[K, V]` 
+will do a correct job, as it's in fact an associative list supporting lookup operation. At the end, `ListMap[K, V]` is
+a list that is naturally a functor. This, if we look closer, is aligned with one requirement of functor definition:
+`#map` doesn't, or shouldn't alter the shape of the data structure.
+
+When `Map` using a `Set` to manage the `K`s, what in fact going to happens is the shape, in this case the key set, will
+be distorted as there is no constraint for the function passed into `#map` to return distinct target `K`s as well(or in
+jargon word, an injective function). So when the timing is wrong, the composition law will be violated.
+
+Then we shall look into the assumption of the iteration order. This is very annoying, as in the second case, I will
+need to make a specific assumption to make it fail. However, this assumption is drawn from the **common** understanding
+of `Map` being unordered key-value pairs. But this assumption can be avoided, if we specifically look at the `Map`s that
+reserve the order of the keys, aka `SortedMap`. In this case, the iteration order is always deterministic and the
+previous test won't fail. Unfortunately, preserving order won't be able to handle the case when `f` swaps the order of
+`K`s. e.g.
+
+```scala
+val m = Map(1 -> 1, 2 -> 2)
+def f(t: (Int, Int)) = (-t._1, t._2)
+def g(t: (Int, Int)) = (1, t._2)
+```
+
+```scala
+m map ((f _) andThen (g _)) // yields Map(1 -> 2)
+m map f map g // yields Map(1 -> 1)
+```
+
+That's very sad to see a common operation like this implies so much issue.
+
+## Analysis based on type
+
+If there was an interface for `Functor` in scala, situation won't be this embarassing as it would have been captured by
+the type system for the first time people tried to implement it. As of now, for the sake of consistency to the
+community and ease of performing analysis, the haskell definition of `Functor` above will be used.
+
+The scala `#map` is euiquivalent to haskell `fmap` as previously defined, and if we verbosify the actually type of
+`fmap`, here is what we will have:
+
+```haskell
+fmap :: forall a b. (a -> b) -> f a -> f b
+```
+
+`forall` in haskell type is a universal qualifier, meaning it has to hold for every single existing or non-existing
+type. In this case, we can state the type of `fmap` in human language like the following: for all kinds of `a` and `b`,
+it takes a function from `a` to `b` and a functor `f` of `a`, and produces a functor `f` of `b`. `forall` here is the
+key point: the implementation has to be universally adaptive to all kinds of input and as a result, and that concludes
+`fmap` cannot probe `a` and `b`, only knowing the concrete category of functor being `f`. 
+
+Besides the constraint of not altering the origin data structure, there is another much more fundamental problem that
+we can observe from the type: `a` and `b` cannot be arbitrary types for `Map`s, but can only be 2-tuples. This objects
+the way it's defined to be a functor already. If there was an interface to express functor, the type system will not 
+compile the implementation as it clearly expects 2-tuple from input and output.
+
+Interestingly, some who heard of *free theorem* might say "doesn't it contradict to free theorem as it's so obvious
+that `fmap id == id` for `Map`s"? For those who don't know, *free theorem* is a merit we get from having types
+explicitly, which allows some conclusions to be derived from some conditions and the types. Concretely, for functor,
+the free theorem concludes that for those `fmap` implementation, as long as `fmap id == id` holds, composition law will
+be satisfied automatically. But why it doesn't work in this case? Well, the answer lies in the types. The reason this
+free theorem holds all because of the `forall` condition there. It guarantees an implementation must not probe both `a`
+and `b` and not alter the structure of original functor `f`. However, given the structure being exposed to the
+function, i.e. the structure is hidden in the first field of the tuple, this constraint is destroyed and hence so is
+the theorem. In this aspect, it still corresponds to th previous analysis.
+
+## Map is actually a functor
+
+With all these problems, however, it doesn't mean `Map` cannot be a functor. In fact, `Map` can be defined as a
+functor, regardless in which order the keys will be iterated. In this case, it can be any `Map`s. In fact,
+this is implemented in Scala by `#mapValues`. It can be easily verified.
+
+First of all, identity law is trivial.
+
+Secondly, composition law is also trivial. To begin with, it can be soon realized that the `forall` qualifier can be
+met now: there is no constraint to the type of values at all. Then, since only value for each key-value pair is
+changed, key remains unchanged and that implies the shape remains unchanged as well. Then the argument is as trivial as
+to state:
+
+```
+f . g == \x -> f (g x)
+```
+
+as it is literally defined.
+
+
+## What about Set?
+
+As the close relation to `Map`, another obvious question to ask is whether `Set` has this problem as well. And the
+answer is: yes and no. The yes part means it's positive in scala for hash based `Set` implementation, not due to 
+any rigorous mathematical reason, but the characteristic of JVM, i.e. all objects can compare equality and implement
+hash code. No part means equality and hash code is a constraint, and the `Set` of a type without them cannot own a
+concrete instance. This constraint makes a functor implementation of `Set` might not be able to be justified.
+
+To start with, let's consider both laws in the context of `Set`. Again, identity law is very trivial. In the case of
+composition law, it goes differently from the `Map` case. As there is no value associated with the elements in `Set`, 2
+objects cannot be distinguished as long as they compare equal. So for 2 distinct elements in a `Set`, no matter which
+path it takes, either `fmap f . fmap g` or `fmap (f . g)`, to produce the very same element, we cannot distinguish from
+which original element it comes from, hence the composition law holds as well. 
+
+So let's come back and revise the constraints of equality comparison and senseful hash code implementation. In Scala,
+as builtin in JVM, these 2 contraints are satisfied automatically, at least they exist for every object, so the problem
+is not outstanding. However, if we consider the problem in haskell, it soon becomes obvious that the element type `a` of
+`Set a` always come with 2 constraints: `Eq a` and `Hashable a`. And therefore in order to have the data structure
+makes sense, we will have to change the type of `fmap` to be:
+
+```haskell
+fmap :: (Eq a, Hashable a, Eq b, Hashable b) => (a -> b) -> Set a -> Set b
+```
+
+Note the left hand side of `=>` in haskell indicates a list of constraints. And that obviously shows that it cannot
+hold `forall a b` anymore. Hence, `Set` cannot really be defined as a functor. The implementation and correctness in
+Scala happen to be very specific to JVM environment.
+
+
+Some might ask then "you just said `Map` is a functor and `Map[K, Unit]` is equivalent to `Set[K]`, how come one can be
+defined as functor but not the other"? Well, considering we are in the scope of functional programming with
+mathematical basis, the forms of all problems in mathematics matter. All is due to the position of the very element we
+will be dealing with. Again, it's much easier to demonstrate in haskell language:
+
+```haskell
+class Functor f where -- ...
+```
+
+Here, `f` happens to be a type, and is of kind, in haskell:
+
+```
+* -> *
+```
+
+this means `f` is a higher order type that takes a type and finally return a type. What becomes the target of the the
+functor, in fact, is the type that `f` takes as type parameter, i.e. `a` of `f a`. So in the `Map` case, there could be
+as much as constraints to `K`, as long as `V` is free, we can define functor to it. However, in the case of `Set`, we
+will be directly dealing with `K`, which might come with different kinds of constraints. And this disallows us
+to freely define a functor instance.

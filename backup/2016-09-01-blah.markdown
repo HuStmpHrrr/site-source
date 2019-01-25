@@ -1,0 +1,28 @@
+---
+layout: post
+title: Blah Blah Blah
+categories: blog
+tags: blah
+---
+
+Technology world is very cruel. Failing to catch up might directly lead to incapability. On the other hand, 
+it's a good fact to realize, as it actually pushes me to constantly learn something.
+
+In software practice, it's very often to see people ignoring a number of things that are very important, like:
+
+* code organisation
+* code consistency
+* documentations
+* programming languages
+* theories
+
+Some might think about all these in a naive way but some might take them more seriously. The deviation of ways
+of thinking among programmers brings all the chaos under the sun. The conflicts between ideas from people with
+different levels of understanding are very hard to resolve. It's very interesting, or sometimes sad, to see
+an almost common basis can diverge so much when it comes the time to practice.
+
+Noticing that, it's definitely worth it to dive deeper into this computer scientific universe and it turns out
+writing articles is a very helpful activity during an exploration.
+
+So why not? Let's do it.
+
