@@ -40,6 +40,19 @@ education:
         month: 9
         year: 2017
       to: present
+    courses:
+      - code: CS 341
+        name: Algorithms
+      - code: CS 745
+        name: Computer-Aided Verification
+      - code: CS 766
+        name: Theory of Quantum Information
+        report: /asset/pdf/766.pdf
+      - code: ECE 653
+        name: Software Testing, Quality Assurance and Maintenance
+      - code: CS 860
+        name: Advanced Topics in Algorithms and Complexity
+        report: /asset/pdf/860.pdf
   - school: Fudan University
     location: Shanghai, China
     degree: Bachelor of Science

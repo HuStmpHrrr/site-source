@@ -107,6 +107,17 @@
                                 <div class="subheading mb-3">{{entry.degree}}</div>
                                 <div>{{entry.subject}}</div>
                                 <p>Grade: {{entry.grade}}</p>
+                                {% if entry.courses is defined %}
+                                    <ul>
+                                        {% for course in entry.courses %}
+                                            <li>{{course.code}} {{course.name}}
+                                                {% if course.report is defined %}
+                                                    <a href="{{course.report}}">(report)</a>
+                                                {% endif %}
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
                             </div>
                             <div class="resume-date text-md-right">
                                 {% set fromStr = "%02d / %d" | format(entry.span.from.month, entry.span.from.year) %}
@@ -131,10 +142,10 @@
                     {% for entry in industry %}
                         <div class="resume-item d-flex flex-column flex-md-row">
                             <div class="resume-content mr-auto">
-                                <h3 class="mb-0">{{entry.position}}</h3>
-                                <div class="subheading mb-3">{{entry.company}}</div>
+                                <h3 class="mb-0">{{entry.company}}</h3>
+                                <div class="subheading mb-3">{{entry.position}}</div>
                                 {% if entry.description is defined %}
-                                    <p>{{entry.description}}</p>
+                                    <p class="writing">{{entry.description | replace("\n", "<br/>")}}</p>
                                 {% endif %}
                             </div>
                             <div class="resume-date text-md-right">
