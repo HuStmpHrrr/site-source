@@ -1,0 +1,124 @@
+first: 钟晟
+last: 胡
+emails:
+  - use: 个人
+    address: fdhzs2010@hotmail.com
+  - use: 学校
+    address: zs2hu@uwaterloo.ca
+social:
+  linkedin: https://www.linkedin.com/in/jasonhuzs/
+  github: https://github.com/HuStmpHrrr
+  gitlab: https://gitlab.com/JasonHuZS
+description: >-
+  我现在是<a href="https://plg.uwaterloo.ca/">滑铁卢大学</a>的研究生，导师是<a
+  href="https://plg.uwaterloo.ca/~olhotak/">Ondřej Lhoták</a>教授。本科在<a
+  href="http://www.fudan.edu.cn/en/">复旦大学</a>。
+
+  我主要学习编程语言，形式证明和类型理论，用到<a href="https://coq.inria.fr/">Coq</a>
+  和<a href="https://agda.readthedocs.io/en/v2.5.4.2/">Agda</a>等工具。其中，类型理论
+  是非经典数学理论，是不同于集合论的数学基础。
+
+  我的学习范围非常广泛，每个阶段的学习内容都不尽相同。在工作时调试分布式程序提升实时效
+  率；也没少调过奇怪的bug。本科时主要学习控制理论和机器人学。计算机科学是本科时自学的。
+  初高学过数学、物理和化学竞赛。
+
+  硕士论文是关于<a href="https://gitlab.com/JasonHuZS/AlgDotCalculus">DOT的类型检查算
+  法</a>。
+
+education:
+  - school: 滑铁卢大学
+    location: 加拿大，安大略省，滑铁卢
+    degree: 数学硕士
+    subject: 计算机科学
+    grade: 94.4/100
+    span:
+      from:
+        month: 9
+        year: 2017
+      to: present
+    courses:
+      - code: CS 341
+        name: Algorithms
+      - code: CS 745
+        name: Computer-Aided Verification
+      - code: CS 766
+        name: Theory of Quantum Information
+        report: /asset/pdf/766.pdf
+      - code: ECE 653
+        name: Software Testing, Quality Assurance and Maintenance
+      - code: CS 860
+        name: Advanced Topics in Algorithms and Complexity
+        report: /asset/pdf/860.pdf
+  - school: 复旦大学
+    location: 上海
+    degree: 理学学士
+    subject: 电子工程
+    grade: 3.35/4.0
+    span:
+      from:
+        month: 9
+        year: 2010
+      to:
+        month: 7
+        year: 2014
+
+industry:
+  - company: 摩根士丹利
+    location: 加拿大，魁北克省，蒙特利尔
+    position: Summer Analyst Intern
+    span:
+      from:
+        month: 5
+        year: 2018
+      to:
+        month: 8
+        year: 2018
+  - company: 摩根士丹利
+    location: 加拿大，魁北克省，蒙特利尔
+    position: Java / Scala Developer
+    span:
+      from:
+        month: 10
+        year: 2015
+      to:
+        month: 7
+        year: 2017
+  - company: Nexsan Technologies
+    location: 加拿大，魁北克省，Dorval
+    position: Software Developer
+    span:
+      from:
+        month: 8
+        year: 2014
+      to:
+        month: 10
+        year: 2015
+  - company: 国双科技
+    location: 上海
+    position: .Net实习工程师
+    span:
+      from:
+        month: 5
+        year: 2014
+      to:
+        month: 6
+        year: 2014
+  - company: Virtuos
+    location: 上海
+    position: QA实习
+    span:
+      from:
+        month: 7
+        year: 2013
+      to:
+        month: 8
+        year: 2013
+
+others: >-
+  操四门语言。英语较优，雅思8.5；日语一般，日常听说读没啥障碍。
+
+  <a href="https://en.wikipedia.org/wiki/Foshan">佛山</a>人；不，我不会打<a
+  href="https://en.wikipedia.org/wiki/Wing_Chun">咏春</a>。
+      
+interests: >-
+  打游戏；打羽毛球；看电影。但是读硕以后基本没有闲暇功夫了。

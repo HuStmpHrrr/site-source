@@ -32,3 +32,5 @@ fi
 mkdir -p "$OUTPUT_DIR"
 cp -r "$INPUT_DIR/static/"* "$OUTPUT_DIR/"
 python "$DIR/generate.py" "$DIR/CV.yaml" "$DIR/index.tmpl" -o "$OUTPUT_DIR/index.html"
+mkdir -p "$OUTPUT_DIR/zh"
+python "$DIR/generate.py" "$DIR/CV.zh.yaml" "$DIR/index.zh.tmpl" -o "$OUTPUT_DIR/zh/index.html"

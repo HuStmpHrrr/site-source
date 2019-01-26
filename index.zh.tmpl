@@ -1,0 +1,16 @@
+{% extends "index.tmpl" %}
+{% block title %}
+    <title>{{last}}{{first}}的主页</title>
+{% endblock %}
+{% block name %}
+    <h1 class="mb-0" style="display: inline; padding-right:20px">
+        <span class="text-primary">{{last}}</span>{{first}}
+    </h1>
+{% endblock %}
+{% block sections %}
+    {% set titles.mappings = {"about": "关于我自己", "education": "教育背景",
+        "industry": "工作经验", "others": "其他信息", "interests": "兴趣爱好"} %}
+{% endblock %}
+
+
+
