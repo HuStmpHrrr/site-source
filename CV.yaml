@@ -66,6 +66,28 @@ education:
         month: 7
         year: 2014
 
+teaching:
+  - school : University of Waterloo
+    location: Waterloo, ON
+    position: Teaching Assistant / Instructional Apprendice
+    span:
+      from:
+        month: 9
+        year: 2017
+      to: present
+    description: >-
+      CS 241, Foundation of Sequentual Programs
+      
+      CS 343, Concurrent and Parallel Programming
+
+activities:
+  - kind: Society
+    name: American Mathematical Society
+    position: student member
+  - kind: Summer school
+    name: DeepSpec Summer School 2018
+    position: student
+
 industry:
   - company: Morgan Stanley Services Canada Corp.
     location: Montreal, QC
