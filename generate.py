@@ -17,8 +17,8 @@ def main():
     with open(result.cv) as fd:
         cv = yaml.load(fd)
 
-    env = Environment(loader=FileSystemLoader(os.path.abspath(
-        os.path.join(result.template, os.path.pardir))))
+    env = Environment(loader=FileSystemLoader(os.path.abspath(os.path.join(
+        result.template, os.path.pardir))), trim_blocks=True, lstrip_blocks=True)
     tmpl = env.get_template(os.path.basename(result.template))
 
     if result.output is None:

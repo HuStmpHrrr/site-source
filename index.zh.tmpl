@@ -7,11 +7,34 @@
         <span class="text-primary">{{last}}</span>{{first}}
     </h1>
 {% endblock %}
+{% block nav_name %}
+    {{last}}{{first}}
+{% endblock %}
 {% block sections %}
-    {% set titles.mappings = {"about": "关于我自己", "education": "教育背景",
+    {% set titles.mappings = {"about": "关于自己", "education": "教育背景",
         "teaching": "教学活动", "activities": "其他活动",
         "industry": "工作经验", "others": "其他信息", "interests": "兴趣爱好"} %}
 {% endblock %}
 
+{% block additional_css %}
+    <link href="/css/resume.zh.css" rel="stylesheet">
+{% endblock %}
 
-
+{% block additionalJs %}
+    <script>
+     function stripSpaces(node) {
+         switch (node.nodeName) {
+             case "#text":
+                 node.data = node.data.replace(/\s/g, '');
+                 break;
+             default:
+                 for (c of node.childNodes) {
+                     stripSpaces(c)
+                 }
+         }
+     }
+     for (e of $("p.paragraph")) {
+         stripSpaces(e)
+     }
+    </script>
+{% endblock %}        
