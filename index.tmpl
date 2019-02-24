@@ -162,7 +162,7 @@
                                 <h4 class="mb=1" style="display: inline">{{entry.location}}</h4>
                                 <div class="subheading mb-3">{{entry.position}}</div>
                                 {% if entry.description is defined %}
-                                    <p class="writing paragraph">{{entry.description | replace("\n", "<br/>")}}</p>
+                                    <p class="writing paragraph keep-space">{{entry.description | replace("\n", "<br/>")}}</p>
                                 {% endif %}
                             </div>
                             <div class="resume-date text-md-right">

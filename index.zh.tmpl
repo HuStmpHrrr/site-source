@@ -36,7 +36,9 @@
          }
      }
      for (e of $("p.paragraph")) {
-         stripSpaces(e)
+         if (!e.classList.contains("keep-space")) {
+             stripSpaces(e);
+         }
      }
     </script>
 {% endblock %}        
