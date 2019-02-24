@@ -11,8 +11,8 @@ social:
   gitlab: https://gitlab.com/JasonHuZS
 description: >-
   我现在是<a href="https://plg.uwaterloo.ca/">滑铁卢大学</a>的研究生，导师是<a
-  href="https://plg.uwaterloo.ca/~olhotak/">Ondřej Lhoták</a>教授。本科在<a
-  href="http://www.fudan.edu.cn/en/">复旦大学</a>。
+  href="https://plg.uwaterloo.ca/~olhotak/" class="keep-space">Ondřej Lhoták</a>教授。
+  本科在<a href="http://www.fudan.edu.cn/en/">复旦大学</a>。
 
   我主要学习编程语言，形式证明和类型理论，用到<a href="https://coq.inria.fr/">Coq</a>
   和<a href="https://agda.readthedocs.io/en/v2.5.4.2/">Agda</a>等工具。其中，类型理论

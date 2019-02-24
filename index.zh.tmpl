@@ -28,8 +28,10 @@
                  node.data = node.data.replace(/\s/g, '');
                  break;
              default:
-                 for (c of node.childNodes) {
-                     stripSpaces(c)
+                 if (!node.classList.contains("keep-space")) {
+                     for (c of node.childNodes) {
+                         stripSpaces(c)
+                     }
                  }
          }
      }
