@@ -12,15 +12,19 @@ social:
 description: >-
   我现在是<a href="https://plg.uwaterloo.ca/">滑铁卢大学</a>的研究生，导师是<a
   href="https://plg.uwaterloo.ca/~olhotak/" class="keep-space">Ondřej Lhoták</a>教授。
-  本科在<a href="http://www.fudan.edu.cn/en/">复旦大学</a>。
+  本科在<a href="http://www.fudan.edu.cn/">复旦大学</a>。
 
-  我主要学习编程语言，形式证明和类型理论，用到<a href="https://coq.inria.fr/">Coq</a>
-  和<a href="https://agda.readthedocs.io/en/v2.5.4.2/">Agda</a>等工具。其中，类型理论
-  是非经典数学理论，是不同于集合论的数学基础。
+  现在，我主要学习编程语言，形式证明和类型理论，用到<a
+  href="https://coq.inria.fr/">Coq</a>和<a
+  href="https://wiki.portal.chalmers.se/agda/pmwiki.php">Agda</a>等工具。我的研究方向
+  属于计算机科学和数学的交叉方向，涉及到探索计算机的数学本质。其中，类型理论是非经典数
+  学理论，是不同于集合论的数学基础，是一种构造数学。在哲学里，这类数学被称作数学直觉主
+  义。我本人认为这个翻译相当烂。
 
-  我的学习范围非常广泛，每个阶段的学习内容都不尽相同。在工作时调试分布式程序提升实时效
-  率；也没少调过奇怪的bug。本科时主要学习控制理论和机器人学。计算机科学是本科时自学的。
-  初高学过数学、物理和化学竞赛。
+  我的学习范围非常广泛，每个阶段的学习内容都不尽相同。尽管当前学习的是相当理论化的数学
+  和计算机，但是在工作时主要是调试分布式程序提升实时效率；也没少调过奇怪的bug，是非常
+  工程化的。本科后两年主要学习控制理论和机器人学。计算机科学的基础是本科时自学的。初高
+  学过数学、物理和化学竞赛，有一些奖。
 
   硕士论文是关于<a href="https://gitlab.com/JasonHuZS/AlgDotCalculus">DOT的类型检查算
   法</a>。

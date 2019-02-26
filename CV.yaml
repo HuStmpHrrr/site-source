@@ -21,10 +21,14 @@ description: >-
   proof assistants based on Martin-Löf type theory, e.g. <a
   href="https://coq.inria.fr/">Coq</a> and <a
   href="https://agda.readthedocs.io/en/v2.5.4.2/">Agda</a>. I am particularly
-  interested in various type theories and the mathematics behind them. Before heading
-  back to school, I worked on a number of projects involving performance engineering,
-  configurations, and others that you might expect to see in the industry. Back in my
-  old days at Fudan University, I was more of a robotic guy.
+  interested in various type theories and the mathematics behind them. As a purist, I
+  insist that if a proof can be done constructively, then it needs to be; if a
+  mechanized proof can be established, there is no reason not to.
+
+  Before heading back to school, I worked as an engineer on a number of projects
+  involving performance engineering, configurations, and others that you might expect
+  to see in the industry. Back in my old days at Fudan University, I was more of a
+  robotic guy.
 
   My WIP master's thesis project is on <a
   href="https://gitlab.com/JasonHuZS/AlgDotCalculus">algorithmic typing of DOT</a>.
