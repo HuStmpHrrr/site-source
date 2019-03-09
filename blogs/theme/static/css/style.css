@@ -504,26 +504,26 @@ h1 {
     font-size: 2em;
     line-height: 1em;
     text-indent: -1px;
-    margin: 2em 0 -0.5em
+    margin: 1em 0 -0.5em
 }
 
 h2 {
     font-size: 1.75em;
     line-height: 1.111em;
     text-indent: -1px;
-    margin: 2.286em 0 -0.571em
+    margin: 1.286em 0 -0.571em
 }
 
 h3 {
     font-size: 1.5em;
     line-height: 1.333em;
-    margin: 2em 0 -0.666em
+    margin: 1em 0 -0.666em
 }
 
 h4 {
     font-size: 1.25em;
     line-height: 1.2em;
-    margin: 2.4em 0 -0.8em
+    margin: 1.4em 0 -0.8em
 }
 
 h1 a,
@@ -538,7 +538,7 @@ h6 a {
 p,
 ul,
 ol {
-    margin: 2em auto
+    margin: 1em auto
 }
 
 ul {
@@ -684,7 +684,7 @@ tt {
 
 pre {
     position: relative;
-    margin: 2em auto;
+    margin: 1em auto;
     padding: 1em;
     overflow: hidden;
     font-family: 'Inconsolata', monospace, sans-serif;
