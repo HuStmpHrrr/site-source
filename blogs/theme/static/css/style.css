@@ -1829,6 +1829,7 @@ img {
     display: inline-block;
     padding: 0.2em 0.15em;
     vertical-align: middle;
+    border: thin gray solid;
 }
 
 .tag-weight-1  { font-size: 100%; }

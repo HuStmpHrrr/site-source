@@ -8,11 +8,13 @@
       {% endfor %}
 
       {% if DISPLAY_PAGES_ON_MENU %}
+          <li style="margin: 1em auto" />
           {% for p in pages %}
               <li{% if p == page %} class="nav-{{p.slug}} active"{% endif %} role="presentation"><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
           {% endfor %}
       {% else %}
           {% if DISPLAY_CATEGORIES_ON_MENU %}
+              <li style="margin: 1em auto" />
               {% for cat, null in categories %}
                   <li{% if cat == category %} class="nav-{{cat.slug}} active"{% endif %} role="presentation"><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
               {% endfor %}

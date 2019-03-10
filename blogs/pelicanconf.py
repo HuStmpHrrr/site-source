@@ -44,5 +44,20 @@ DISPLAY_CATEGORIES_ON_MENU = True
 HEADER_COVER = 'images/cover.png'
 HEADER_COLOR = "#32A4D4"
 
+# MENUITEMS = [
+#     ('Tags', '/{}/tags.html'.format())
+# ]
+
+
+class MenuItems(object):
+    def __iter__(self):
+        return iter([
+            ('Tags', '{}/tags.html'.format(SITEURL)),
+            ('Categories', '{}/categories.html'.format(SITEURL))
+        ])
+
+
+MENUITEMS = MenuItems()
+
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True

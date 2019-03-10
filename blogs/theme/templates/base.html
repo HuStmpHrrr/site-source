@@ -112,15 +112,16 @@
             {% else %}
               {% set left='Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a>' %}
             {% endif %}
-
+            
             {% if SHOW_CREDITS and SHOW_CREDITS.right %}
               {% set right=SHOW_CREDITS.right %}
             {% else %}
               {% set right='Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a>' %}
             {% endif %}
 
-          <span class="credits-theme">{{left}}</span>
-          <span class="credits-software">{{right}}</span>
+            <span class="credits-theme">{{left}}</span>
+            <span class="credits-software">{{right}}</span>
+            <span>© Jason Hu All Rights Reserved</span>
           {% endif %}
         </section>
       </div>
