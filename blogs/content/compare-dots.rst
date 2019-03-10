@@ -264,9 +264,9 @@ criticizing, so I guess to make the game fair, I should point out a number of th
 that can be done in OOPSLA DOT, but not Wadlerfest DOT.
 
 1. Wadlerfest DOT has no union types (:math:`\vee`).
-1. Objects / recursive types in Wadlerfest DOT have no subtyping relation between
-them. This is what led to the comparison to begin with. It's unimaginably strange
-that, in an object-oriented setting, there isno subtyping relation among objects.
+2. Objects / recursive types in Wadlerfest DOT have no subtyping relation between
+   them. This is what led to the comparison to begin with. It's unimaginably strange
+   that, in an object-oriented setting, there isno subtyping relation among objects.
 
 Takeaways
 #########
