@@ -511,19 +511,19 @@ h2 {
     font-size: 1.75em;
     line-height: 1.111em;
     text-indent: -1px;
-    margin: 1.286em 0 -0.571em
+    margin: 1.286em 0 0
 }
 
 h3 {
     font-size: 1.5em;
     line-height: 1.333em;
-    margin: 1em 0 -0.666em
+    margin: 1em 0 0
 }
 
 h4 {
     font-size: 1.25em;
     line-height: 1.2em;
-    margin: 1.4em 0 -0.8em
+    margin: 1.4em 0 0
 }
 
 h1 a,
