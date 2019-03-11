@@ -23,3 +23,9 @@ DELETE_OUTPUT_DIRECTORY = True
 
 #DISQUS_SITENAME = ""
 #GOOGLE_ANALYTICS = ""
+
+MENUITEMS = [
+    ('Tags', '{}/tags.html'.format(SITEURL)),
+    ('Categories', '{}/categories.html'.format(SITEURL))
+]
+
