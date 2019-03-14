@@ -3,5 +3,5 @@ template taken from
 
 # Dependencies
 
-* Palican
+* Pelican
 * PyYaml
