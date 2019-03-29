@@ -3,6 +3,5 @@ template taken from
 
 # Dependencies
 
-* Palican
-* Typogrify
-* BeatutifulSoup4
+* Pelican
+* PyYaml
