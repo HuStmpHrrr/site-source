@@ -3,9 +3,11 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Jason Hu'
-SITENAME = u"Jason Hu's Blogs"
+SITENAME = u"Jason Hu's Blog"
 SITEURL = ''
 
+ARTICLE_SAVE_AS = '{date:%Y}/{slug}.html'
+ARTICLE_URL = '{date:%Y}/{slug}.html'
 PATH = 'content'
 
 TIMEZONE = 'America/Toronto'

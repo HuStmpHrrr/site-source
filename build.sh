@@ -34,9 +34,9 @@ cp -r "$INPUT_DIR/static/"* "$OUTPUT_DIR/"
 python "$DIR/generate.py" "$DIR/CV.yaml" "$DIR/index.tmpl" -o "$OUTPUT_DIR/index.html"
 mkdir -p "$OUTPUT_DIR/zh"
 python "$DIR/generate.py" "$DIR/CV.zh.yaml" "$DIR/index.zh.tmpl" -o "$OUTPUT_DIR/zh/index.html"
-mkdir -p "$OUTPUT_DIR/blogs"
+mkdir -p "$OUTPUT_DIR/blog"
 export OUTPUT_ABS=`readlink -f "$OUTPUT_DIR"`
 (
-    cd blogs;
-    pelican content -t theme -s publishconf.py -o "$OUTPUT_ABS/blogs"
+    cd blog;
+    pelican content -t theme -s publishconf.py -o "$OUTPUT_ABS/blog"
 )
