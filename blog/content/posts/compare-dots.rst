@@ -49,8 +49,8 @@ In Scala, a class can have type members. In DOT, we call it type tags.
   // then in the future, one may refer to the type inside of Foo
   val y : x.A = ???
 
-In the notation `>:` means that `Foo` is some subtype of `A`, and `<:` means `Bar` is
-some supertype of `A`. Now consider the following piece of code.
+In the notation :math:`>:` means that `Foo` is some subtype of `A`, and :math:`<:`
+means `Bar` is some supertype of `A`. Now consider the following piece of code.
 
 .. code-block:: scala
 
@@ -58,9 +58,9 @@ some supertype of `A`. Now consider the following piece of code.
   val z2 : x.A = z1
   val z3 : Bar = z2
 
-`x.A` in the second is what we called path dependent types. We refer to the hidden
-type inside of the object via member access. This piece of code shows something very
-strange. To begin with, the code has nothing to do with particular `Foo` or
+`x.A` in the second line is what we called *path dependent types*. We refer to the
+hidden type inside of the object via member access. This piece of code shows something
+very strange. To begin with, the code has nothing to do with particular `Foo` or
 `Bar`. That means one can turn any types into any other types. From theoretical point
 of view, in the core calculus, we don't really need this assignment sequence to
 achieve the same result. Instead, we rely on a fundamental property from the calculus,
@@ -70,7 +70,7 @@ transitivity.
 
    \frac{\Gamma \vdash S <: T \quad \Gamma \vdash T <: U}{\Gamma \vdash S <: U} (Trans)
   
-Relying in transitivity, we can derive `z1` having type `Bar` immediately. However,
+Relying on transitivity, we can derive `z1` having type `Bar` immediately. However,
 such derivation can only be made possible, if `x` is in the context to begin
 with. Namely, there needs to be some instance of `Foo` we can refer to: note that path
 dependent types only works for existing variables. We refer to this characteristic of
