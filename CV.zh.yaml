@@ -88,9 +88,16 @@ activities:
   - kind: Society
     name: 美国数学学会
     position: 学生会员
+    period : 2018
   - kind: Summer school
-    name: DeepSpec Summer School 2018
+    name: DeepSpec Summer School
     position: 学生
+    period: 2018
+  - kind: Summer schoo
+    name: Oregon Programming Languages Summer School
+    position: 学生
+    period: 2019
+    description: with fellowship
 
 industry:
   - company: 摩根士丹利

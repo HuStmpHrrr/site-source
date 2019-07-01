@@ -198,6 +198,11 @@
                                     <p class="writing paragraph">{{entry.description | replace("\n", "<br/>")}}</p>
                                 {% endif %}
                             </div>
+                            {% if entry.period is defined %}
+                                <div class="resume-date text-md-right">
+                                    <span class="text-primary">{{entry.period}}</span>
+                                </div>
+                            {% endif %}
                         </div>
                     {% endfor %}
                 </div>
