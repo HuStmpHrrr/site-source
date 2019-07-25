@@ -103,7 +103,7 @@
                     </div>
                     <p class="lead mb-5 paragraph">{{description | replace("\n", "<br/>")}}</p>
                     <div class="social-icons">
-                        {% set externals = ["linkedin", "github", "gitlab", "facebook", "twitter", "stack-overflow"] %}
+                        {% set externals = ["linkedin", "github", "gitlab", "facebook", "twitter", "stack-overflow", "zhihu"] %}
                         {% for ex in externals if social[ex] is defined %}
                             <a href="{{social[ex]}}">
                                 <i class="fab fa-{{ex}}"></i>
