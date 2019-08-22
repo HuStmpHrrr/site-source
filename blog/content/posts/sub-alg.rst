@@ -5,7 +5,7 @@ Subtyping with Algebra
 :tags: DOT, programming languages, research, type theory, proof assistants
 :category: Scala / DOT
 :authors: Jason Hu
-:summary: Study subtyping in algebraic approach!
+:summary: Study subtyping in an algebraic approach!
 
 Introduction
 ############

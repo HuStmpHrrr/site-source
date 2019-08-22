@@ -1,0 +1,1164 @@
+<!doctype html>
+<html>
+    <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Jason's Presentation</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/math.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+        <link rel="stylesheet" type="text/css" href="http://tikzjax.com/v1/fonts.css">
+
+        <script src="http://tikzjax.com/v1/tikzjax.js"></script>
+	<!-- Printing and PDF exports -->
+	<script>
+	 var link = document.createElement( 'link' );
+	 link.rel = 'stylesheet';
+	 link.type = 'text/css';
+	 link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+	 document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+
+        <style type="text/css">
+         .reveal .slides section .fragment.current-only {
+             opacity: 1;
+         }
+         .reveal .slides section .fragment.current-only.current-fragment {
+             display: block;
+         }
+
+         .reveal .slides section p {
+             text-align: left;
+         }
+         .reveal .slides section div {
+             text-align: left;
+         }
+         
+         .reveal .slides section.title p {
+             text-align: center;
+         }
+         .reveal pre {
+             /* width: 100%; */
+             font-size: 0.5em;
+             box-shadow: unset;
+         }
+         .reveal .slides section .fragment.step-fade-in-then-out {
+	     opacity: 0;
+	     display: none;
+         }
+         .reveal .slides section .fragment.step-fade-in-then-out.current-fragment {
+	     opacity: 1;
+	     display: block;
+         }
+         .reveal .slides section .fragment.step-fade-in-then-out.inline.current-fragment {
+	     opacity: 1;
+	     display: inline;
+         }
+         .reveal .slides section .fragment.fade-out.visible {
+             opacity: 0;
+             display: none;
+         }
+         .reveal .slides section .fragment.fade-in:not(.visible) {
+             opacity: 0;
+             display: none;
+         }
+         
+         .reveal .slides section .fragment.fade-in-empty {
+	     opacity: 0;
+	     display: none;
+         }
+         .reveal .slides section .fragment.fade-in-empty.visible {
+	     opacity: 1;
+	     display: inline;
+         }
+
+         .reveal .slides section div.tikz {
+             margin: 30pt;
+         }
+         
+         .reveal .slides section div.tikz>div {
+             margin: auto;
+         }
+         
+         .reveal .slides section div svg text {
+             font: inherit;
+             font-size: 18pt;
+         }
+
+         .reveal .slides .left-align {
+             text-align: left;
+         }
+
+         .reveal .slides section div.rules-box {
+             display: flex;
+             flex-wrap: wrap;
+         }
+
+         .reveal .slides section div.rules-box>div {
+             flex: 1;
+             margin: 10px 5px;
+         }
+
+         .reveal .slides section div.rules-box div span.MJXp-math.MJXp-display {
+             margin: 0;
+         }
+         
+         .reveal .slides section .smaller .MathJax_PHTML {
+             font-size: 27px !important;
+         }
+         
+         .reveal .slides section .box-current-red {
+             opacity: 1;
+             visibility: inherit;
+         }
+
+         .reveal .slides section .box-current-red.current-fragment {
+             border: 2px solid red;
+         }
+
+         .red-box {
+             border: 2px solid red;
+         }
+
+         .reveal .slides section {
+             font-size: 30px;
+         }
+
+         .reveal .slides section .fragment.cross-out{
+             opacity: 1;
+             visibility: inherit;
+         }
+
+         .reveal .slides section .fragment.cross-out.visible{
+             background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='none' viewBox='0 0 100 100'><path d='M100 0 L0 100 ' stroke='red' stroke-width='1'/><path d='M0 0 L100 100 ' stroke='red' stroke-width='1'/></svg>");
+             background-repeat:no-repeat;
+             background-position:center center;
+             background-size: 100% 100%, auto;
+         }
+        </style>
+        
+        <style type="text/css">
+         .tg  {border-collapse:collapse;border-spacing:0;}
+         .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:inherit;}
+         .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:inherit;}
+         .tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
+         .tg .tg-9wq8{border-color:inherit;text-align:center;vertical-align:middle}
+         .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+         .tg .tg-0lax{text-align:left;vertical-align:top; border-bottom: 1px solid !important;}
+        </style>
+    </head>
+    <body>
+	<div class="reveal">
+	    <div class="slides">
+		<section class="title" data-markdown data-menu-title="Title">
+                    <textarea data-template  style="text-align:center !important">
+## Decidability and Algorithmic Analysis of Dependent Object Types (DOT)
+
+Jason Hu
+
+University of Waterloo
+                    </textarea>
+                </section>
+                
+		<section>
+                    <h2>Preface</h2>
+                    
+                    There are <font style="color: #d5541f">223</font> pages in my thesis...
+                    
+                    <p class="fragment fade-in" style="text-align:center">so I will mainly focus on $D_{<:}$.</p>
+                </section>
+                
+		<section>
+                    <section>
+                        <h2>Preliminaries</h2>
+                    </section>
+                    
+                    <section>
+                        <h3>Dependent Object Types (DOT)</h3>
+
+                        <div class="fragment fade-out" data-fragment-index="0">
+                            <ul>
+                                <li>DOT is a core calculus of Scala.</li>
+                                <li>The first DOT was drafted in 2012 [Amin et al. 12].</li>
+                                <li>Soundness proofs, however, only appear since 2016 [Amin et al. 16, Rompf and Amin 16, Rapoport et al. 17].</li>
+                            </ul>
+
+                        </div>
+
+                        <div class="fragment fade-in" data-fragment-index="0">
+                            <p>There are three core features:</p>
+                            
+                            <ul>
+                                <li> path dependent types (<code>x.A</code>), </li>
+                                <li> intersection types (<code>T $\wedge$ U</code>), and </li>
+                                <li> $\mu$ types.</li>
+                            </ul>
+
+                            <p class="fragment" data-fragment-index="1">Let's focus on path dependent types.</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3>Path Dependent Types (Account)</h3>
+                        <pre><code id="account-code" data-trim data-line-numbers=" " class="stretch">
+class NotEnoughBalance(amount : Long) extends RuntimeException
+
+trait Account {
+  type B <: Bank 
+  def id : Int
+  protected var _balance : Long
+  def balance : Long = _balance
+  def deposit(amount : Long) : Long = {
+    _balance += amount
+    balance
+  }
+  def withdraw(amount : Long) : Long = {
+    if (amount > balance) {
+      throw new NotEnoughBalance(amount)
+    }
+    _balance -= amount
+    balance
+  }
+}
+                        </code></pre>
+                        <p class="fragment" code-target="account-code" data-line-numbers="4,5,7" />
+                        <p class="fragment" code-target="account-code" data-line-numbers="8-11" />
+                        <p class="fragment" code-target="account-code" data-line-numbers="12-18" />
+                        <aside class="notes">
+                            <ul>
+                                <li>an account stores id and its balance. it also has a type B denoting its bank.</li>
+                                <li>there are two methods, deposit() deposits some amount of money into the account.</li>
+                                <li>withdraw() withdraws certain amount from the account. if the amount is less than the balance, an exception is thrown.</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h3>Path Dependent Types (Bank)</h3>
+
+                        <pre><code class="scala" id="bank-code" data-trim data-line-numbers=" " data-noescape>
+trait Bank { self =>
+  type A <: Account { type B = self.type }
+  def lookupAccount(id : Int) : A
+  def createAccount(initialBalance : Long = 0) : A
+  def transfer(amount : Long, from : self.A,
+    toBank : Bank, to : <span class="fragment highlight-red" code-target="bank-code" data-line-numbers="5-9" data-fragment-index="1">toBank.A</span>) : Unit = {
+    from.withdraw(amount)
+    to.deposit(amount)
+  }
+}
+                        </code></pre>
+                        <p class="fragment" code-target="bank-code" data-line-numbers="2-4" data-fragment-index="0" />
+                        <p class="fragment" data-fragment-index="1">Note that <code>to</code> has type <code>toBank.A</code> which depends on a previous input.</p>
+                        <!-- <p class="fragment" code-target="bank-code" data-line-numbers="5-9" /> -->
+                    </section>
+
+                    <!-- <section>
+                         <h3>Path Dependent Types (Banks)</h3>
+                         
+                         <pre><code class="scala" id="impl-code" data-trim data-line-numbers="4,6-9">
+                         object BankOfWaterloo extends Bank { bank =>
+                         class A(val id : Int, protected var _balance : Long)
+                         extends Account {
+                         type B = bank.type
+                         }
+                         def lookupAccount(id : Int) : A
+                         def createAccount(initialBalance : Long = 0) : A
+                         def transfer(amount : Long, from : self.A,
+                         toBank : Bank, to : toBank.A) : Unit
+                         /* ... */
+                         }
+                         object WaterlooBank extends Bank { /* ... */ }
+                         </code></pre>
+                         </section> -->
+
+                    <section>
+                        <h3>Path Dependent Types (Example)</h3>
+                        
+                        <pre><code class="scala" data-trim>
+object BankOfWaterloo extends Bank { /* ... */ }
+object WaterlooBank extends Bank { /* ... */ }
+val david = BankOfWaterloo.createAccount(200)
+val elly = WaterlooBank.createAccount(300)
+                        </code></pre>
+
+                        <pre><code class="scala" data-trim>
+def transfer(amount : Long, from : self.A,
+  toBank : Bank, to : toBank.A) : Unit
+                        </code></pre>
+                        
+                        <span class="fragment step-fade-in-then-out" data-fragment-index="0">
+                            <pre><code class="scala">BankOfWaterloo.transfer(10, david, WaterlooBank, elly)</code></pre>
+                            <p>This program transfers 10 dollars from David to Elly.</p>
+                            <p>It type checks as David is with Bank of Waterloo and Elly is with Waterloo Bank.</p>
+                        </span>
+
+                        <span class="fragment fade-in" data-fragment-index="1">
+                            <pre><code class="scala" data-trim data-noescape>
+BankOfWaterloo.transfer(10, david, BankOfWaterloo, <span class="fragment step-fade-in-then-out inline" data-fragment-index="1">elly</span><span class="fragment fade-in-empty" data-fragment-index="2" style="border:1.5px solid red">elly</span>)
+<span class="fragment fade-in-empty" data-fragment-index="2">                                                   ^^^^</span>
+                            </code></pre>
+                            <p>What about this program?</p>
+                            <p class="fragment step-fade-in-then-out" data-fragment-index="2">
+                                Notice that Elly is with Waterloo Bank so she has type <code>WaterlooBank.A</code> and
+                                the program will be rejected.
+                            </p>
+                            
+                            <p class="fragment" data-fragment-index="3">
+                                Path depedent types are powerful and flexible, but...
+                            </p>
+                        </span>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>there are two banks, bank of waterloo and waterloo bank.</li>
+                                <li>david is a customer of bank of waterloo and elly is a customer of waterloo bank.</li>
+                            </ul>
+                        </aside>
+                    </section>
+                </section>
+
+                <section>
+                    <h3>How do we type check path dependent types?</h3>
+
+                    <ul>
+                        <li class="fragment">Is it subtyping decidable with the presence of path dependent types?</li>
+                        <li class="fragment">If not, what is a decidable fragment?</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <section>
+                        <h3>$D_{<:}$ and Decidability Analysis</h3>
+
+                        <p>$D_{<:}$ is the simplest calculus in the DOT calculi family. It has only <span style="color:red">path depedent types</span> out of the three core features.</p>
+                        <p>The idea is to show that a complete type checking algorithm is impossible, i.e. type checking is undecidable.</p>
+
+                        <aside class="notes">there are two questions.</aside>
+                    </section>
+
+                    <section>
+                        <h3>Definition of $D_{<:}$</h3>
+
+                        <div class="rules-box smaller">
+                            <div>
+                                $$\dfrac{ }{\Gamma \vdash T <: \top}\text{Top}$$
+                            </div>
+                            
+                            <div>
+                                $$\dfrac{ }{\Gamma \vdash \bot <: T}\text{Bot}$$
+                            </div>
+
+                            <div>
+                                $$\dfrac{ }{\Gamma \vdash T <: T}\text{Refl}$$
+                            </div>
+                            
+                            <div class="fragment box-current-red" data-fragment-index="0">
+                                $$\dfrac{\Gamma \vdash S_2 <: S_1 \quad \Gamma \vdash U_1 <: U_2}{\Gamma \vdash \{ A : S_1 .. U_1 \} <: \{ A : S_2 .. U_2 \}}\text{Bnd}$$
+                            </div>
+
+                            <div class="fragment box-current-red" data-fragment-index="1">
+                                $$\dfrac{\Gamma \vdash S_2 <: S_1 \quad \Gamma;x : S_2 \vdash U_1 <: U_2}{\Gamma \vdash \forall(x : S_1)U_1 <: \forall(x : S_2)U_2}\text{All}$$
+                            </div>
+
+                            <div class="fragment box-current-red" data-fragment-index="2">
+                                $$\dfrac{\Gamma \vdash \Gamma(x) <: \{A : S .. \top\}}{\Gamma \vdash S <: x.A}\text{Sel1}$$
+                            </div>
+
+                            <div class="fragment box-current-red" data-fragment-index="2">
+                                $$\dfrac{\Gamma \vdash \Gamma(x) <: \{A : \bot .. U\}}{\Gamma \vdash x.A <: U}\text{Sel2}$$
+                            </div>
+
+                            <div class="fragment box-current-red" data-fragment-index="3">
+                                $$\dfrac{\Gamma \vdash S <: T \quad \Gamma \vdash T <: U}{\Gamma \vdash S <: U}\text{Trans}$$
+                            </div>
+                        </div>
+
+                        <aside class="notes">Bnd and All have contravariant component.</aside>
+                    </section>
+                    
+                    <section>
+                        <h3>Reduction</h3>
+
+                        <div class="left-align definition">
+                            For two decision problems $Q(x)$ and $P(x)$, $Q \le P$ if there exists a mapping $M$ such that $Q(x)$ outputs yes iff $P(M(x))$ outputs yes.
+                        </div>
+                        
+                        <div class="tikz fragment fade-out" data-fragment-index="0">
+                            <script type="text/tikz">
+                             \begin{tikzpicture}[x=1.5pt,y=1.5pt,yscale=-1,xscale=1]
+                             %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+
+                             % Text Node
+                             \draw (136,141.33) node  [align=left] {Q(x)};
+                             % Text Node
+                             \draw (308.67,140.5) node  [align=left] {P(M(x))};
+                             % Connection
+                             \draw    (298.22,151.5) .. controls (249.52,181.54) and (199.7,182.11) .. (148.73,153.22) ;
+                             \draw [shift={(147.19,152.33)}, rotate = 390.03999999999996] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+
+                             % Connection
+                             \draw    (146.85,130.33) .. controls (195.39,101.41) and (244.96,100.85) .. (295.55,128.65) ;
+                             \draw [shift={(297.09,129.5)}, rotate = 209.27] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+
+
+                             \end{tikzpicture}
+                            </script>
+                        </div>
+                        
+                        <div class="fragment fade-in" data-fragment-index="0" style="margin:30px">
+                            To show $D_{<:}$ is undecidable:
+                            <p/>
+                            <ol>
+                                <li> find an undecidable problem $Q$ to reduce from, </li>
+                                <li> find a right mapping $M$, and</li>
+                                <li> show the if-and-only-if proof.
+                            </ol>
+                        </div>
+
+                        <aside class="notes">notice that reduction requires an iff proof.</aside>
+                    </section>
+                    
+                    <section>
+                        <h3>An Attempt: Reduction from $F_{<:}$ [Amin et al. 16]</h3>
+
+                        <div class="fragment fade-out" data-fragment-index="0">
+                            <div class="rules-box smaller">
+                                <div>
+                                    $$\dfrac{ }{\Gamma \vdash T <: \top}\text{F-Top}$$
+                                </div>
+
+                                <div>
+                                    $$\dfrac{ }{\Gamma \vdash X <: X}\text{F-VarRefl}$$
+                                </div>
+                                
+                                <div>
+                                    $$\dfrac{X <: T \in \Gamma \quad \Gamma \vdash T <: U}{\Gamma \vdash X <: U}\text{F-Tvar}$$
+                                </div>
+                                
+                                <div>
+                                    $$\dfrac{\Gamma \vdash S_2 <: S_1 \quad \Gamma;X <: S_2 \vdash U_1 <: U_2}{\Gamma \vdash \forall X <: S_1 .U_1 <: \forall X <: S_2.U_2}\text{F-All}$$
+                                </div>
+                            </div>
+                            <div class="rule-box smaller">
+                                <div>
+                                    $$\dfrac{\Gamma \vdash S_2 <: S_1 \quad \Gamma \vdash U_1 <: U_2}{\Gamma \vdash S_1 \to U_1 <: S_2 \to U_2}\text{F-Fun}$$
+                                </div>
+                            </div>
+                            
+                            <div class="theorem">
+                                [Pierce 92] $F_{<:}$ subtyping is undecidable.
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="fragment step-fade-in-then-out smaller" data-fragment-index="0">
+                            $$\begin{align}
+                            M(\top) &= \top \\
+                            M(X) &= x_X.A \\
+                            M(S \to U) &= \forall(x : M(S))M(U) \\
+                            M(\forall X<:S .U) &= \forall(x_X : \{A : \bot .. M(S)\})M(U) \\
+                            M(\Gamma) &= \{ x_X : \{ A : \bot .. M(T) \} | X <: T \in \Gamma \}
+                            \end{align}$$
+                        </div>
+
+                        <div class="fragment fade-out" data-fragment-index="3">
+                            <div class="theorem left-align fragment fade-in" data-fragment-index="0">
+                                [Amin et.al. 16] <font color="red">If</font> an $F<:$ judgment $\Gamma \vdash S <: U$ holds, then the $D_{<:}$ judgment $M(\Gamma) \vdash M(S) <: M(U)$ holds.
+                            </div>
+
+                            <div class="fragment fade-in" data-fragment-index="1">
+                                Problem: Reduction is an if-and-only-if proof!
+
+                                <div class="fragment" data-fragment-index="2">
+                                    In fact, the other direction does not hold!
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fragment fade-in" data-fragment-index="3">
+                            <div style="width: 100%; display: table;">
+                                <div style="display: table-row">
+                                    <div class="smaller" style="display: table-cell">
+                                        $$\begin{align}
+                                        M(\top) &= \top \\
+                                        M(X) &= x_X.A
+                                        \end{align}$$
+                                    </div>
+                                    <div class="smaller" style="display: table-cell">
+                                        $$\begin{align}
+                                        M(S \to U) &= \forall(x : M(S))M(U) \\
+                                        M(\forall X<:S .U) &= \forall(x_X : \{A : \bot .. M(S)\})M(U)
+                                        \end{align}$$
+                                    </div>
+                                </div>
+                            </div>
+                            <p>Consider a rejected judgment in $F_{<:}$: $\vdash (\top \to \top) <: (\forall X <: \top. \top)$. </p>
+                            <div class="fragment smaller" data-fragment-index="5">
+                                $$\begin{align}
+                                M(\top \to \top) &= \forall(x : \top)\top \\
+                                M(\forall X<:\top .\top) &= \forall(x_X : \{A : \bot .. \top\})\top \\
+                                \end{align}$$
+
+                                But in $D_{<:}$, they have a subtyping relation concluded by All!
+
+                                $$
+                                \dfrac{\vdash \{A : \bot .. \top\} <: \top \text{(Top)} \quad x : \{A : \bot .. \top\} \vdash \top <: \top \text{(Refl)} }{\vdash (\forall(x : \top)\top) <: (\forall(x_X : \{A : \bot .. \top\})\top)}\text{All}
+                                $$
+                            </div>
+                        </div>
+                        
+                        <aside class="notes">
+                            <ul>
+                                <li>F<: has only type variables.</li>
+                                <li>notice that F<: does not admit subtyping between function types and universal types.</li>
+                                <li>the interpretation function maps function types and universal types to dependent function types in D<:.</li>
+                                <li>the example is rejected because F<: does not admit subtyping between function types and universal types.</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <!-- <section>
+                         <h3>The Problem:</h3>
+
+                         <div class="smaller">
+                         $$\begin{align}
+                         M(S \to U) &= \forall(x : M(S))M(U) \\
+                         M(\forall X<:S .U) &= \forall(x_X : \{A : \bot .. M(S)\})M(U) \\
+                         \end{align}$$
+
+                         Both function types and universal types in $F_{<:}$ map to dependent function types in $D_{<:}$.
+                         </div>
+
+                         <div class="fragment">
+                         The solution is to drop function types in $F_{<:}$. The resulting calculus is called $F^-_{<:}$:
+                         <div class="theorem left-align">
+                         $F^-_{<:}$ is undecidable.
+                         </div>
+                         </div>
+                         </section> -->
+
+                    <section>
+                        <h3>Solution: Reduction from $F^-_{<:}$</h3>
+
+                        <div style="min-height:60px">
+                            <p class="fragment fade-out" data-fragment-index="0">Definition of $F_{<:}$:</p>
+                            <p class="fragment fade-in" data-fragment-index="0">Removing function types ($\to$) from $F_{<:}$ gives $F^-_{<:}$.</p>
+                        </div>
+                        
+                        <div class="rules-box smaller">
+                            <div>
+                                $$\dfrac{ }{\Gamma \vdash T <: \top}\text{F-Top}$$
+                            </div>
+
+                            <div>
+                                $$\dfrac{ }{\Gamma \vdash T <: T}\text{F-Refl}$$
+                            </div>
+                            
+                            <div>
+                                $$\dfrac{X <: T \in \Gamma \quad \Gamma \vdash T <: U}{\Gamma \vdash X <: U}\text{F-Tvar}$$
+                            </div>
+                            
+                            <div>
+                                $$\dfrac{\Gamma \vdash S_2 <: S_1 \quad \Gamma;X <: S_2 \vdash U_1 <: U_2}{\Gamma \vdash \forall X <: S_1 .U_1 <: \forall X <: S_2.U_2}\text{F-All}$$
+                            </div>
+
+                            <div  class="fragment cross-out" data-fragment-index="0">
+                                $$\dfrac{\Gamma \vdash S_2 <: S_1 \quad \Gamma ; X <: S_2 \vdash U_1 <: U_2}{\Gamma \vdash S_1 \to U_1 <: S_2 \to U_2}\text{F-Fun}$$
+                            </div>
+                        </div>
+
+                        <div class="fragment" data-fragment-index="1">
+                            <div class="theorem">
+                                $F^-_{<:}$ subtyping is undecidable.
+                            </div>
+                            <div class="proof">
+                                The proof in Pierce 92 does not rely on function types.
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section>
+                        <h3>A Phenomenon: Bad Bounds</h3>
+
+                        <div>
+                            Consider the following subtyping derivation:
+
+                            <p>Let $\Gamma = x : \{ A : S .. U\}$:</p>
+                            
+                            <div>
+                                $$\dfrac{\dfrac{\Gamma\vdash \{ A : S .. U \} <: \{ A : S .. \top \}}{\Gamma \vdash S <: x.A}\text{Sel1}
+                                \quad \dfrac{\Gamma\vdash \{ A : S .. U \} <: \{ A : \bot .. U \}}{\Gamma \vdash x.A <: U}\text{Sel2}}
+                                {\Gamma\vdash S <: U}\text{Trans}$$
+                            </div>
+                        </div>
+
+                        <div class="fragment">
+                            Bad bounds can prove subtyping between any two types given the right context!
+                        </div>
+
+                        <div class="fragment">
+                            Bad Bounds are consequences of the Sel1, Sel2 and Trans rules.
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3>$D_{<:}$ Normal Form</h3>
+
+                        <div class="rules-box smaller fragment fade-out" data-fragment-index="1">
+                            <div>
+                                $$\dfrac{ }{\Gamma \vdash T <: \top}\text{Top}$$
+                            </div>
+                            
+                            <div>
+                                $$\dfrac{ }{\Gamma \vdash \bot <: T}\text{Bot}$$
+                            </div>
+
+                            <div>
+                                $$\dfrac{ }{\Gamma \vdash T <: T}\text{Refl}$$
+                            </div>
+                            
+                            <div>
+                                $$\dfrac{\Gamma \vdash S_2 <: S_1 \quad \Gamma \vdash U_1 <: U_2}{\Gamma \vdash \{ A : S_1 .. U_1 \} <: \{ A : S_2 .. U_2 \}}\text{Bnd}$$
+                            </div>
+
+                            <div>
+                                $$\dfrac{\Gamma \vdash S_2 <: S_1 \quad \Gamma;x : S_2 \vdash U_1 <: U_2}{\Gamma \vdash \forall(x : S_1)U_1 <: \forall(x : S_2)U_2}\text{All}$$
+                            </div>
+
+                            <div>
+                                $$\dfrac{\Gamma \vdash \Gamma(x) <: \{A : S .. \top\}}{\Gamma \vdash S <: x.A}\text{Sel1}$$
+                            </div>
+
+                            <div>
+                                $$\dfrac{\Gamma \vdash \Gamma(x) <: \{A : \bot .. U\}}{\Gamma \vdash x.A <: U}\text{Sel2}$$
+                            </div>
+                        </div>
+
+                        <div class="rules-box smaller fragment fade-in" data-fragment-index="1">
+                            <div>
+                                $$\dfrac{\Gamma \vdash S <: T \quad \Gamma \vdash T <: U}{\Gamma \vdash S <: U}\text{Trans}$$
+                            </div>
+                        </div>
+
+                        <div class="rules-box smaller" style="border: 2px solid red" >
+                            <div class="fragment fade-out" data-fragment-index="0">
+                                $$\dfrac{\Gamma \vdash S <: T \quad \Gamma \vdash T <: U}{\Gamma \vdash S <: U}\text{Trans}$$
+                            </div>
+
+                            <div class="fragment fade-in" data-fragment-index="0">
+                                $$\dfrac{\Gamma \vdash \Gamma(x) <: \{A : S .. \top\} \quad \Gamma \vdash \Gamma(x) <: \{A : \bot .. U\}}{\Gamma \vdash S <: U}\text{BB}$$
+                            </div>
+                        </div>
+
+                        <div class="fragment fade-in" data-fragment-index="1">
+                            <p> This new definition of $D_{<:}$ is called <em>$D_{<:}$ normal form</em>.</p>
+                            
+                            <div class="theorem">
+                                $D_{<:}$ normal form admits transitivity.
+                            </div>
+                            
+                            <div class="theorem">
+                                $D_{<:}$ normal form is equivalent to the original $D_{<:}$.
+                            </div>
+
+                        </div>
+                        
+                    </section>
+
+                    <section>
+                        <h3>$D_{<:}$ Normal Form (Cont'd)</h3>
+                        <div>
+                            <div>
+                                $$\dfrac{\Gamma \vdash S <: T \quad \Gamma \vdash T <: U}{\Gamma \vdash S <: U}\text{Trans}$$
+                            </div>
+
+                            <div>
+                                $$\dfrac{\Gamma \vdash \Gamma(x) <: \{A : S .. \top\} \quad \Gamma \vdash \Gamma(x) <: \{A : \bot .. U\}}{\Gamma \vdash S <: U}\text{BB}$$
+                            </div>
+                        </div>
+
+                        <div class="fragment fade-out" data-fragment-index="2">
+                            Let's compare both rules:
+                            <ul>
+                                <li>The BB rule is a specialization of the Trans rule: it is just transitivity on a path type <code>x.A</code>.</li>
+                                <li class="fragment" data-fragment-index="0">
+                                    The equivalence, however, indicates that both rules have the same expressive power.
+                                </li>
+                                <li class="fragment" data-fragment-index="1">
+                                    $D_{<:}$ normal form is simpler because the BB rule forces $T = x.A$ for some $x$.
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <div class="fragment" data-fragment-index="2">
+                            <div class="theorem">
+                                $D_{<:}$ subtyping is undecidable.
+                            </div>
+                            <p class="proof"> By reduction from $F^-_{<:}$.</p>
+                        </div>
+
+                    </section>
+
+                    <section>
+                        <h3>Food for Thought</h3>
+
+                        <div>
+                            <p>We want to maintain transitivity and drop bad bounds.</p>
+                            <p/>
+                            <p>But in $D_{<:}$, one cannot achieve both at the same time.</p>
+                        </div>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h3>How do we decide subtyping in $D_{<:}$?</h3>
+                        
+                        <p>Since it is undecidable, we can only target a fragment of admissble subtyping.</p>
+
+                        <p>In my thesis, there are 2 decidable fragments of $D_{<:}$.</p>
+                    </section>
+
+                    <section>
+                        <h3>Kernel $D_{<:}$</h3>
+
+                        <div style="min-height:60px">
+                            <p class="fragment fade-out" data-fragment-index="0">The following is the definition of $D_{<:}$:</p>
+                            <p class="fragment step-fade-in-then-out" data-fragment-index="0">First let's remove the BB rule.</p>
+                            <p class="fragment step-fade-in-then-out" data-fragment-index="1">Then make the parameter type of the All rule identical.</p>
+                            <p class="fragment fade-in" data-fragment-index="2">This is the definition of kernel $D_{<:}$.</p>
+                        </div>
+                        
+                        <div class="rules-box smaller">
+                            <div>
+                                $$\dfrac{ }{\Gamma \vdash T <: \top}\text{Top}$$
+                            </div>
+                            
+                            <div>
+                                $$\dfrac{ }{\Gamma \vdash \bot <: T}\text{Bot}$$
+                            </div>
+
+                            <div>
+                                $$\dfrac{ }{\Gamma \vdash T <: T}\text{Refl}$$
+                            </div>
+                            
+                            <div>
+                                $$\dfrac{\Gamma \vdash S_2 <: S_1 \quad \Gamma \vdash U_1 <: U_2}{\Gamma \vdash \{ A : S_1 .. U_1 \} <: \{ A : S_2 .. U_2 \}}\text{Bnd}$$
+                            </div>
+
+                            <div class="fragment fade-out" data-fragment-index="1">
+                                $$\dfrac{\Gamma \vdash S_2 <: S_1 \quad \Gamma;x : S_2 \vdash U_1 <: U_2}{\Gamma \vdash \forall(x : S_1)U_1 <: \forall(x : S_2)U_2}\text{All}$$
+                            </div>
+                            <div class="fragment fade-in" data-fragment-index="1">
+                                $$\dfrac{\Gamma;x : \bbox[border:2px solid red]{S} \vdash U_1 <: U_2}{\Gamma \vdash \forall(x : \bbox[border:2px solid red]{S})U_1 <: \forall(x : \bbox[border:2px solid red]{S})U_2}\text{All'}$$
+                            </div>
+
+                            <div>
+                                $$\dfrac{\Gamma \vdash \Gamma(x) <: \{A : S .. \top\}}{\Gamma \vdash S <: x.A}\text{Sel1}$$
+                            </div>
+
+                            <div>
+                                $$\dfrac{\Gamma \vdash \Gamma(x) <: \{A : \bot .. U\}}{\Gamma \vdash x.A <: U}\text{Sel2}$$
+                            </div>
+
+                            <div class="fragment cross-out" data-fragment-index="0">
+                                $$\dfrac{\Gamma \vdash \Gamma(x) <: \{A : S .. \top\} \quad \Gamma \vdash \Gamma(x) <: \{A : \bot .. U\}}{\Gamma \vdash S <: U}\text{BB}$$
+                            </div>
+                        </div>
+
+                        <div class="fragment theorem" data-fragment-index="3">
+                            Kernel $D_{<:}$ is decidable.
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3>A Problem of Kernel $D_{<:}$</h3>
+
+                        <p>Consider</p>
+                        <div>
+                            $$\dfrac{\Gamma;x : S \vdash U_1 <: U_2}{\Gamma \vdash \forall(x : S)U_1 <: \forall(x : S)U_2}\text{K-All}$$
+                        </div>
+
+                        <div class="fragment">
+                            The following subtyping is rejected by kernel $D_{<:}$:
+                            <div>
+                                $$x : \{A : \top .. \top\} \vdash \forall(y : x.A)\top <: \forall(y : \top)\top$$
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section>
+                        <h3>Strong Kernel $D_{<:}$</h3>
+
+                        <div class="fragment fade-out" data-fragment-index="0">
+                            Now let's lift the previous limitation.
+                        </div>
+
+                        <div class="fragment" data-fragment-index="0">
+                            <p>The idea is to realize that subtyping can be achieved by <b>more than one</b> context!</p>
+
+                            <div>
+                                Consider
+
+                                <div class="fragment fade-out" data-fragment-index="1">
+                                    $$\dfrac{\Gamma \vdash S_2 <: S_1 \quad \Gamma;x : S_2 \vdash U_1 <: U_2}{\Gamma \vdash \forall(x : S_1)U_1 <: \forall(x : S_2)U_2}\text{All}$$
+
+                                    <p>Pierce 92 explained that this rule introduces undecidability.</p>
+                                    <p>But his proof only works if there is only <b>one</b> context.</p>
+                                </div>
+
+                                <div class="fragment fade-in" data-fragment-index="1">
+                                    $$\dfrac{\Gamma \vdash S_2 <: S_1 \bbox[border:2px solid red]{\dashv \Gamma}
+                                    \quad \Gamma;x : S_1 \vdash U_1 <: U_2 \bbox[border:2px solid red]{\dashv \Gamma ; x : S_2}}
+                                    {\Gamma \vdash \forall(x : S_1)U_1 <: \forall(x : S_2)U_2 \bbox[border:2px solid red]{\dashv \Gamma}}\text{SK-All}$$
+                                    <p class="fragment" data-fragment-index="2">Now the premises of this rule are simply structurally smaller subproblems.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <aside class="notes">
+                            mention that x might be captured by U's.
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h3>Strong Kernel $D_{<:}$ (Cont'd)</h3>
+
+                        <div class="rules-box smaller">
+                            <div>
+                                $$\dfrac{ }{\Gamma_1 \vdash T <: \top \dashv \Gamma_2}\text{SK-Top}$$
+                            </div>
+                            
+                            <div>
+                                $$\dfrac{ }{\Gamma_1 \vdash \bot <: T \dashv \Gamma_2}\text{SK-Bot}$$
+                            </div>
+
+                            <div>
+                                $$\dfrac{ }{\Gamma_1 \vdash x.A <: x.A \dashv \Gamma_2}\text{SK-VRefl}$$
+                            </div>
+                            
+                            <div>
+                                $$\dfrac{\Gamma_1 \vdash S_1 >: S_2 \dashv \Gamma_2
+                                \quad \Gamma_1 \vdash U_1 <: U_2 \dashv \Gamma_2}{\Gamma_1 \vdash \{ A : S_1 .. U_1 \} <: \{ A : S_2 .. U_2 \} \dashv \Gamma_2}\text{SK-Bnd}$$
+                            </div>
+
+                            <div class="red-box">
+                                $$\dfrac{\Gamma_1 \vdash S_1 >: S_2 \dashv \Gamma_2
+                                \quad \Gamma_1;x : S_1 \vdash U_1 <: U_2 \dashv \Gamma_2 ; x : S_2}{\Gamma_1 \vdash \forall(x : S_1)U_1 <: \forall(x : S_2)U_2 \dashv \Gamma_2}\text{SK-All}$$
+                            </div>
+
+                            <div>
+                                $$\dfrac{\Gamma_1 \vdash \{A : S .. \top\} >: \Gamma_2(x) \dashv \Gamma_2}{\Gamma_1 \vdash S <: x.A \dashv \Gamma_2}\text{SK-Sel1}$$
+                            </div>
+
+                            <div>
+                                $$\dfrac{\Gamma_1 \vdash \Gamma_1(x) <: \{A : \bot .. U\} \dashv \Gamma_2}{\Gamma_1 \vdash x.A <: U \dashv \Gamma_2}\text{SK-Sel2}$$
+                            </div>
+                        </div>
+
+                        <div class="theorem fragment">
+                            Strong kernel $D_{<:}$ is decidable.
+                        </div>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h3>Intersection Types $S \wedge U$</h3>
+
+                        The previous results of $D_{<:}$ naturally extend to $D_{\wedge}$ which extends $D_{<:}$ with intersection types and data member types.
+                    </section>
+
+                    <section>
+                        <h3>$D_{\wedge}$ Normal Form</h3>
+
+                        There is also a normal form for $D_{\wedge}$, which extends $D_{<:}$ normal form with the following rules:
+
+                        <div class="rules-box smaller">
+                            <div class="fragment box-current-red" data-fragment-index="0" >
+                                $$\dfrac{\Gamma \vdash T_1 <: T_2}{\Gamma \vdash \{a : T_1\} <: \{ a : T_2\}}\text{Fld}$$
+                            </div>
+
+                            <div class="fragment box-current-red" data-fragment-index="1" >
+                                $$\dfrac{\Gamma \vdash S <: T}{\Gamma \vdash S \wedge U <: T}\text{And-E1}$$
+                            </div>
+
+                            <div  class="fragment box-current-red" data-fragment-index="1" >
+                                $$\dfrac{\Gamma \vdash U <: T}{\Gamma \vdash S \wedge U <: T}\text{And-E2}$$
+                            </div>
+
+                            <div class="fragment box-current-red" data-fragment-index="2" >
+                                $$\dfrac{\Gamma \vdash T <: S \quad \Gamma \vdash T <: U}{\Gamma \vdash T <: S \wedge U}\text{And-I}$$
+                            </div>
+                        </div>
+
+                        <p class="fragment step-fade-in-then-out" data-fragment-index="0">Data member types are covariant.</p>
+                        <p class="fragment step-fade-in-then-out" data-fragment-index="1">Intersection types are monotone.</p>
+                        <p class="fragment step-fade-in-then-out" data-fragment-index="2">Intersection types are greatest lower bounds.</p>
+                        <div class="fragment theorem" data-fragment-index="3">
+                            $D_{\wedge}$ is undecidable.
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3>Strong Kernel $D_{\wedge}$</h3>
+
+                        <p>There is also a decidable strong kernel by extending strong kernel $D_{<:}$ with a straightforward adaptation:</p>
+
+                        <div class="rules-box smaller">
+                            <div>
+                                $$\dfrac{\Gamma_1 \vdash T_1 <: T_2 \dashv \Gamma_2}{\Gamma_1 \vdash \{a : T_1\} <: \{ a : T_2\} \dashv \Gamma_2}\text{SK-Fld}$$
+                            </div>
+
+                            <div>
+                                $$\dfrac{\Gamma_1 \vdash S <: T \dashv \Gamma_2}{\Gamma_1 \vdash S \wedge U <: T \dashv \Gamma_2}\text{And-E1}$$
+                            </div>
+
+                            <div>
+                                $$\dfrac{\Gamma_1 \vdash U <: T \dashv \Gamma_2}{\Gamma_1 \vdash S \wedge U <: T \dashv \Gamma_2}\text{And-E2}$$
+                            </div>
+
+                            <div>
+                                $$\dfrac{\Gamma_1 \vdash T <: S \dashv \Gamma_2 \quad \Gamma_1 \vdash T <: U \dashv \Gamma_2}{\Gamma_1 \vdash T <: S \wedge U \dashv \Gamma_2}\text{And-I}$$
+                            </div>                            
+                        </div>
+                        <div class="fragment theorem">
+                            Strong kernel $D_{\wedge}$ is decidable.
+                        </div>
+                    </section>
+                </section>
+
+                <section>
+                    <h3>Other Calculi</h3>
+
+                    <p>I have not discussed $\mu$ types.</p>
+
+                    <p>$\mu$ types define objects in a way typical in object oriented languages.</p>
+
+                    <p class="fragment">In my thesis, I defined $\mu$-DART and jDOT, in which I constructed an incomplete algorithm for each (c.f. Chapter 6 and 7).</p>
+
+                    <p class="fragment">However, with $\mu$ it is very difficult to prove the calculus undecidable!</p>
+                </section>
+                
+                <section>
+                    <h3>Future Work</h3>
+
+                    $$\dfrac{\Gamma \vdash \Gamma(x) <: \{A : S .. \top\} \quad \Gamma \vdash \Gamma(x) <: \{A : \bot .. U\}}{\Gamma \vdash S <: U}\text{BB}$$
+                    
+                    <p>Strong kernels simply remove the BB rule. What is a decidable fragment of bad bounds?</p>
+
+                    <p class="fragment">
+                        As we've seen, the BB rule is equivalent to transitivity so recovering a fragment of bad bounds recovers a fragment of transitivity, which is a desirable property. 
+                    </p>
+
+                    <p class="fragment">It is even unclear at this point whether the BB rule introduces undecidability! </p>
+                </section>
+
+                <section>
+                    <h3>Summary</h3>
+
+                    <table class="tg">
+                        <tr>
+                            <th class="tg-9wq8" colspan="4">features</th>
+                            <th class="tg-9wq8" rowspan="2">name</th>
+                            <th class="tg-9wq8" rowspan="2">decidable?</th>
+                        </tr>
+                        <tr>
+                            <td class="tg-lboi">bad bounds</td>
+                            <td class="tg-0pky">full All<br></td>
+                            <td class="tg-lboi">intersections</td>
+                            <td class="tg-lboi">$\mu$ types</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-lboi">yes</td>
+                            <td class="tg-0pky">yes<br></td>
+                            <td class="tg-lboi">no</td>
+                            <td class="tg-lboi">no</td>
+                            <td class="tg-0pky">$D_{<:}$</td>
+                            <td class="tg-0pky">no</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0pky">no</td>
+                            <td class="tg-0pky">no</td>
+                            <td class="tg-0pky">no</td>
+                            <td class="tg-0pky">no</td>
+                            <td class="tg-0pky">(strong) kernel $D_{<:}$</td>
+                            <td class="tg-0pky">yes</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0pky">no</td>
+                            <td class="tg-0pky">yes</td>
+                            <td class="tg-0pky">no</td>
+                            <td class="tg-0pky">no</td>
+                            <td class="tg-0pky">$D_{<:}$ without Trans</td>
+                            <td class="tg-0pky">no</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0pky">yes</td>
+                            <td class="tg-0pky">yes</td>
+                            <td class="tg-0pky">yes</td>
+                            <td class="tg-0pky">no</td>
+                            <td class="tg-0pky">$D_{\wedge}$</td>
+                            <td class="tg-0pky">no</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0lax">no</td>
+                            <td class="tg-0lax">no</td>
+                            <td class="tg-0lax">yes</td>
+                            <td class="tg-0lax">no</td>
+                            <td class="tg-0lax">strong kernel $D_{\wedge}$</td>
+                            <td class="tg-0lax">yes</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0lax">yes/no</td>
+                            <td class="tg-0lax">yes/no</td>
+                            <td class="tg-0lax">no</td>
+                            <td class="tg-0lax">yes</td>
+                            <td class="tg-0lax">$\mu$DART</td>
+                            <td class="tg-0lax">unknown</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0lax">yes/no</td>
+                            <td class="tg-0lax">yes/no</td>
+                            <td class="tg-0lax">yes</td>
+                            <td class="tg-0lax">yes</td>
+                            <td class="tg-0lax">DOT</td>
+                            <td class="tg-0lax">unknown</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0lax">yes/no</td>
+                            <td class="tg-0lax">yes/no</td>
+                            <td class="tg-0lax">yes</td>
+                            <td class="tg-0lax">yes</td>
+                            <td class="tg-0lax">jDOT</td>
+                            <td class="tg-0lax">unknown</td>
+                        </tr>
+                    </table>
+                </section>
+                
+                <section>
+                    <h2>Thanks for Your Attention</h2>
+
+                    <p>References:</p>
+                    <p/>
+                    <div style="font-size: 10px">
+                        <p>[Pierce 92] Benjamin C. Pierce. 1992. Bounded quantification is undecidable. In Proceedings of the 19th ACM SIGPLAN-SIGACT symposium on Principles of programming languages (POPL '92).</p>
+                        <p>[Amin et al. 12] Nada Amin, Adriaan Moors & Martin Odersky, FOOL'12: 19th International Workshop on Foundations of Object-Oriented Languages, October 2012</p>
+                        <p>[Amin et al. 16] Amin N., Grütter S., Odersky M., Rompf T., Stucki S. (2016) The Essence of Dependent Object Types.</p>
+                        <p>[Rompf and Amin 16] Tiark Rompf and Nada Amin. 2016. Type soundness for dependent object types (DOT). SIGPLAN Not. 51, 10 (October 2016), 624-641. </p>
+                        <p> [Rapoport et al. 17] Marianna Rapoport, Ifaz Kabir, Paul He, and Ondřej Lhoták. 2017. A simple soundness proof for dependent object types. Proc. ACM Program. Lang. 1, OOPSLA, Article 46 (October 2017), 27 pages.</p>
+                        <p>[Pierce 92] Benjamin C. Pierce. 2002. Types and Programming Languages (1st ed.). The MIT Press. </p>
+                    </div>
+                    <aside class="notes">switch back to the previous slide.</aside>
+                </section>
+	    </div>
+	</div>
+
+	<script src="js/reveal.js"></script>
+        
+	<script>
+	 // More info about config & dependencies:
+	 // - https://github.com/hakimel/reveal.js#configuration
+	 // - https://github.com/hakimel/reveal.js#dependencies
+	 Reveal.initialize({
+             /* width: 1280,
+              * height: 720, */
+             hash: true,
+             /* mouseWheel: true, */
+             slideNumber: 'c/t',
+             menu: { themes: true },
+             math: {
+		 mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js',
+	         config: 'TeX-MML-AM_CHTML',  // See http://docs.mathjax.org/en/latest/config-files.html
+                 TeX: {
+                     extensions: ["autoload-all.js"]
+                 }
+	     },
+	     dependencies: [
+		 { src: 'plugin/markdown/marked.js' },
+		 { src: 'plugin/markdown/markdown.js' },
+		 { src: 'plugin/notes/notes.js', async: true },
+		 { src: 'plugin/highlight/highlight.js', async: true },
+                 { src: 'plugin/math/math.js', async: true },
+                 { src: 'plugin/menu/menu.js' },
+	     ]
+	 });
+	</script>
+
+        <script type="text/x-mathjax-config">
+         MathJax.Hub.Register.StartupHook("End Jax",function () {
+             return MathJax.Hub.setRenderer("PreviewHTML");
+         });
+        </script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+	<script>
+         function clearHighlights(fragment) {
+             var frag = $(fragment);
+             var parent = frag.closest("section");
+             if (frag.attr('code-target') !== undefined) {
+                 var target = frag.attr('code-target');
+                 var block = parent.find('#' + target);
+                 block.find('.highlight-line').removeClass('highlight-line');
+             }
+         }
+         
+         function highlightCode(fragment) {
+             var frag = $(fragment);
+             var parent = frag.closest("section");
+             if (frag.attr('code-target') !== undefined && frag.attr("data-line-numbers") !== undefined) {
+                 var target = frag.attr('code-target');
+                 var dln = frag.attr('data-line-numbers');
+                 var block = parent.find('#' + target);
+                 block.find('.highlight-line').removeClass('highlight-line');
+                 RevealHighlight.highlightLines(block.get(0), dln);
+             }
+         }
+         
+         Reveal.addEventListener( 'slidechanged', function( event ) {
+	     // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+             var codes = $(event.currentSlide).find('code');
+             if (window.hasOwnProperty('RevealHighlight')){
+                 $.each(codes, function(k, v) {
+                     /* v.setAttribute("data-line-numbers", ""); */
+                     RevealHighlight.highlightLines(v);
+                 });
+                 var curfrag = $(event.currentSlide).find('.current-fragment').get(0);
+                 if (curfrag) { highlightCode(curfrag); }
+             };
+         });
+         Reveal.addEventListener( 'fragmentshown', function( event ) {
+	     // event.fragment = the fragment DOM element
+             highlightCode(event.fragment)
+         });
+         Reveal.addEventListener('fragmenthidden', function(event) {
+             var index = event.fragment.getAttribute('data-fragment-index');
+             var parent = $(event.fragment).closest('section');
+             if (index == 0) {
+                 clearHighlights(event.fragment);
+             } else {
+                 var prev = parent.find(`[data-fragment-index=${index - 1}]`).get(0);
+                 highlightCode(prev);
+             }
+         })
+	</script>
+        <script>
+         Reveal.addEventListener( 'slidechanged', function( event ) {
+             setTimeout(
+                 function() {
+                     MathJax.Hub.Rerender(document.querySelector(".slides .present"))
+                 }, 100); 
+         } );
+        </script>
+    </body>
+</html>
