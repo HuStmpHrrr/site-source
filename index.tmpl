@@ -160,7 +160,7 @@
                                         {% endif %}
                                         {% if entry.thesis.abstract is defined %}
                                             <div>
-                                                <div class="abstract-hideshow">Abstract</div>
+                                                <div class="abstract-hideshow" data-toggle="tooltip" data-placement="left" title="Click me">Abstract</div>
                                                 <p class="paragraph keep-space">{{entry.thesis.abstract | replace("\n", "<br/>")}}</p>
                                             </div>
                                         {% endif %}
@@ -330,6 +330,9 @@
                  var target = $(event.target);
                  target.next().toggle("slow");
              }).next().hide();
+         });
+         $(document).ready(function(){
+             $('[data-toggle="tooltip"]').tooltip();
          });
         </script>
         
