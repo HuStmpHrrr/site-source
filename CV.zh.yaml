@@ -9,13 +9,14 @@ social:
   linkedin: https://www.linkedin.com/in/jasonhuzs/
   github: https://github.com/HuStmpHrrr
   gitlab: https://gitlab.com/JasonHuZS
+  stack-overflow: https://stackoverflow.com/users/3040064/jason-hu
   zhihu: https://www.zhihu.com/people/jason-hu-42-79/activities
 description: >-
-  我将在2019年九月份在麦基尔大学读博！
-
-  我现在是<a href="https://plg.uwaterloo.ca/">滑铁卢大学</a>的研究生，导师是<a
-  href="https://plg.uwaterloo.ca/~olhotak/" class="keep-space">Ondřej Lhoták</a>教授。
-  本科在<a href="http://www.fudan.edu.cn/">复旦大学</a>。
+  我现在是<a href="https://www.cs.mcgill.ca/">麦吉尔大学</a>的博士研究生，我的导师是<a
+  href="https://www.cs.mcgill.ca/~bpientka/" class="keep-space">Brigitte Pientka</a>教
+  授。我此前在<a href="https://plg.uwaterloo.ca/">滑铁卢大学</a>读计算机的数学硕士，导
+  师是<a href="https://plg.uwaterloo.ca/~olhotak/" class="keep-space">Ondřej
+  Lhoták</a>教授。本科在<a href="http://www.fudan.edu.cn/">复旦大学</a>。
 
   现在，我主要学习编程语言，形式证明和类型理论，用到<a
   href="https://coq.inria.fr/">Coq</a>和<a
@@ -29,22 +30,74 @@ description: >-
   工程化的。本科后两年主要学习控制理论和机器人学。计算机科学的基础是本科时自学的。初高
   学过数学、物理和化学竞赛，有一些奖。
 
-  硕士论文是关于<a href="https://gitlab.com/JasonHuZS/AlgDotCalculus">DOT的类型检查算
-  法</a>。
-
   我反对996工作制 <a href="https://996.icu"><img src="https://img.shields.io/badge/link-996.icu-red.svg" alt="996.icu"></a>。
 
 education:
+  - school: 麦吉尔大学
+    location: 加拿大，魁北克，蒙特利尔
+    degree: 哲学博士
+    subject: 计算机科学
+    grade: NA
+    span:
+      from:
+        month: 9
+        year: 2019
+      to: present
+    course:
   - school: 滑铁卢大学
     location: 加拿大，安大略省，滑铁卢
     degree: 数学硕士
     subject: 计算机科学
-    grade: 94.4/100
+    grade: 94.4%
     span:
       from:
         month: 9
         year: 2017
-      to: present
+      to:
+        month: 8
+        year: 2019
+    thesis:
+      title: Decidability and Algorithmic Analysis of Dependent Object Types (DOT)
+      description: >-
+        研究DOT运算子的（不可）判定性和算法性质。
+      link: https://uwspace.uwaterloo.ca/handle/10012/14964
+      code: https://gitlab.com/JasonHuZS/AlgDotCalculus
+      abstract: >-
+        Dependent Object Types, or DOT, is a family of calculi developed to study the
+        Scala programming language. These calculi have path dependent types as a
+        feature, and potentially intersection types, union types and recursive
+        types. So far, the study of DOT calculi mostly focuses on the soundness proof,
+        which does not directly contribute to development of compilers. This thesis
+        presents a detailed investigation of decidability and algorithmic properties
+        of the family of DOT calculi.
+
+        In decidability analysis, the undecidability of subtyping of several calculi
+        is formally established, including the D<: and D∧ calculi. Prior to this
+        investigation, the undecidability of subtyping of all DOT calculi including
+        D<: was open. Decidability analysis puts emphasis on a particular form of
+        subtyping rules, called normal form. It turns out that a normal form
+        definition is not only as expressive, but also more suggestive than the
+        original definition. A conceptual device, called small-step analysis, is
+        introduced to assist converting a usual definition of subtyping to its normal
+        form definition. Moreover, decidability analysis gives direct contributions to
+        the algorithmic analysis, by revealing two decidable fragments of D<: in
+        declarative form, called the kernels. Decidability analysis also suggests a
+        novel subtyping algorithm framework, stare-at subtyping. Stare-at subtyping
+        and an existing algorithm are shown to be sound and complete w.r.t. their
+        corresponding kernels.
+
+        In algorithmic analysis, stare-at subtyping is extended to other calculi, with
+        more features than D<:, including D∧, μDART and jDOT. In μDART and jDOT,
+        bi-directional type assignment algorithms are developed. The algorithms
+        developed in this thesis are all shown to be sound with respect to their
+        target calculi and terminating.
+
+        During the development of the algorithms, analysis shows a number of ways in
+        which the Wadlerfest DOT calculus does not directly correspond to the Scala
+        language, while substantially increases the difficulties of algorithmic
+        design. jDOT, therefore, is developed as an alternative formalization of
+        Scala.
+
     courses:
       - code: CS 341
         name: Algorithms
@@ -58,6 +111,7 @@ education:
       - code: CS 860
         name: Advanced Topics in Algorithms and Complexity
         report: /asset/pdf/860.pdf
+
   - school: 复旦大学
     location: 上海
     degree: 理学学士

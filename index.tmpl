@@ -47,6 +47,19 @@
          body p {
              line-height: 1.6;
          }
+
+         .thesis p {
+             margin: 0
+         }
+
+         .abstract-hideshow {
+             background-color: #32A4D44D;
+             margin: 1rem 0;
+         }
+
+         .abstract-hideshow + p {
+             background-color: #CDD4D74D;
+         }
         </style>
 
     </head>
@@ -127,16 +140,42 @@
                                 <div class="subheading mb-3">{{entry.degree}}</div>
                                 <div>{{entry.subject}}</div>
                                 <p>Grade: {{entry.grade}}</p>
+                                {% if entry.thesis is defined %}
+                                    <div class="thesis" style="margin: 1rem 0">
+                                        <p>Thesis:
+                                            {% if entry.thesis.link is defined %}
+                                                <a href="{{entry.thesis.link}}" style="font-weight: bold">{{entry.thesis.title}}</a>
+                                            {% else %}
+                                                <b>{{entry.thesis.title}}</b>
+                                            {% endif %}
+                                            {% if entry.thesis.code is defined %}
+                                                <a href="{{entry.thesis.code}}">(code)</a>
+                                            {% endif %}
+                                        </p>
+                                        {% if entry.thesis.description is defined %}
+                                            <p>{{entry.thesis.description}}</p>
+                                        {% endif %}
+                                        {% if entry.thesis.abstract is defined %}
+                                            <div>
+                                                <div class="abstract-hideshow">Abstract</div>
+                                                <p class="paragraph keep-space">{{entry.thesis.abstract | replace("\n", "<br/>")}}</p>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                {% endif %}
                                 {% if entry.courses is defined %}
-                                    <ul>
-                                        {% for course in entry.courses %}
-                                            <li>{{course.code}} {{course.name}}
-                                                {% if course.report is defined %}
-                                                    <a href="{{course.report}}">(report)</a>
-                                                {% endif %}
-                                            </li>
-                                        {% endfor %}
-                                    </ul>
+                                    <div>
+                                        Courses:
+                                        <ul>
+                                            {% for course in entry.courses %}
+                                                <li>{{course.code}} {{course.name}}
+                                                    {% if course.report is defined %}
+                                                        <a href="{{course.report}}">(report)</a>
+                                                    {% endif %}
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
                                 {% endif %}
                             </div>
                             <div class="resume-date text-md-right">
@@ -282,6 +321,15 @@
         <!-- Custom scripts for this template -->
         <script src="/js/resume.min.js"></script>
 
+        <script>
+         $(document).ready(function(){
+             $(".abstract-hideshow").click(function(event){
+                 var target = $(event.target);
+                 target.next().toggle("slow");
+             }).next().hide();
+         });
+        </script>
+        
         {% block additionalJs %}
         {% endblock %} 
     </body>

@@ -13,12 +13,12 @@ social:
   stack-overflow: https://stackoverflow.com/users/3040064/jason-hu
   zhihu: https://www.zhihu.com/people/jason-hu-42-79/activities
 description: >-
-  I will soon start my PhD at McGill University in September 2019!
-
-  I am currently a grad student at <a href="https://plg.uwaterloo.ca/">University of
-  Waterloo</a>, under the supervision of Professor <a
-  href="https://plg.uwaterloo.ca/~olhotak/">Ondřej Lhoták</a>. Before that, I worked
-  in the industry since 2014. My undergrad was at <a
+  I am currently a PhD student at <a href="https://www.cs.mcgill.ca/">McGill
+  University</a>, under the supervision of Professor <a
+  href="https://www.cs.mcgill.ca/~bpientka/">Brigitte Pientka</a>.  I did my Master of
+  Mathematics at the <a href="https://plg.uwaterloo.ca/">University of Waterloo</a>,
+  supervised by Professor <a href="https://plg.uwaterloo.ca/~olhotak/">Ondřej
+  Lhoták</a>. Before that, I worked in the industry since 2014. My undergrad was at <a
   href="http://www.fudan.edu.cn/en/">Fudan University</a>.
 
   These days, I am mainly working on programming languages and formal proofs using
@@ -34,12 +34,20 @@ description: >-
   to see in the industry. Back in my old days at Fudan University, I was more of a
   robotic guy.
 
-  I am writing up my Master's thesis, titled <a
-  href="https://gitlab.com/JasonHuZS/AlgDotCalculus">Decidability and Algorithmic Analysis of DOT</a>.
-
   I am in support of 996.icu activity <a href="https://996.icu"><img src="https://img.shields.io/badge/link-996.icu-red.svg" alt="996.icu"></a>.
 
 education:
+  - school: McGill University
+    location: Montreal, QC
+    degree: Doctor of Philosophy
+    subject: Computer Science
+    grade: NA
+    span:
+      from:
+        month: 9
+        year: 2019
+      to: present
+    course:
   - school: University of Waterloo
     location: Waterloo, ON
     degree: Master of Mathematics
@@ -49,7 +57,52 @@ education:
       from:
         month: 9
         year: 2017
-      to: present
+      to:
+        month: 8
+        year: 2019
+        
+    thesis:
+      title: Decidability and Algorithmic Analysis of Dependent Object Types (DOT)
+      description: >-
+        Investigation on (un)decidability and algorithmic properties of the family of DOT calculi
+      link: https://uwspace.uwaterloo.ca/handle/10012/14964
+      code: https://gitlab.com/JasonHuZS/AlgDotCalculus
+      abstract: >-
+        Dependent Object Types, or DOT, is a family of calculi developed to study the
+        Scala programming language. These calculi have path dependent types as a
+        feature, and potentially intersection types, union types and recursive
+        types. So far, the study of DOT calculi mostly focuses on the soundness proof,
+        which does not directly contribute to development of compilers. This thesis
+        presents a detailed investigation of decidability and algorithmic properties
+        of the family of DOT calculi.
+
+        In decidability analysis, the undecidability of subtyping of several calculi
+        is formally established, including the D<: and D∧ calculi. Prior to this
+        investigation, the undecidability of subtyping of all DOT calculi including
+        D<: was open. Decidability analysis puts emphasis on a particular form of
+        subtyping rules, called normal form. It turns out that a normal form
+        definition is not only as expressive, but also more suggestive than the
+        original definition. A conceptual device, called small-step analysis, is
+        introduced to assist converting a usual definition of subtyping to its normal
+        form definition. Moreover, decidability analysis gives direct contributions to
+        the algorithmic analysis, by revealing two decidable fragments of D<: in
+        declarative form, called the kernels. Decidability analysis also suggests a
+        novel subtyping algorithm framework, stare-at subtyping. Stare-at subtyping
+        and an existing algorithm are shown to be sound and complete w.r.t. their
+        corresponding kernels.
+
+        In algorithmic analysis, stare-at subtyping is extended to other calculi, with
+        more features than D<:, including D∧, μDART and jDOT. In μDART and jDOT,
+        bi-directional type assignment algorithms are developed. The algorithms
+        developed in this thesis are all shown to be sound with respect to their
+        target calculi and terminating.
+
+        During the development of the algorithms, analysis shows a number of ways in
+        which the Wadlerfest DOT calculus does not directly correspond to the Scala
+        language, while substantially increases the difficulties of algorithmic
+        design. jDOT, therefore, is developed as an alternative formalization of
+        Scala.
+        
     courses:
       - code: CS 341
         name: Algorithms
@@ -63,6 +116,7 @@ education:
       - code: CS 860
         name: Advanced Topics in Algorithms and Complexity
         report: /asset/pdf/860.pdf
+        
   - school: Fudan University
     location: Shanghai, China
     degree: Bachelor of Science
@@ -91,6 +145,11 @@ teaching:
       CS 343, Concurrent and Parallel Programming
 
 activities:
+  - kind: Summer school
+    name: Oregon Programming Languages Summer School
+    period: 2019
+    position: student
+    description: with fellowship
   - kind: Society
     name: American Mathematical Society
     position: student member
@@ -99,11 +158,6 @@ activities:
     name: DeepSpec Summer School
     period: 2018
     position: student
-  - kind: Summer school
-    name: Oregon Programming Languages Summer School
-    period: 2019
-    position: student
-    description: with fellowship
 
 industry:
   - company: Morgan Stanley Services Canada Corp.
