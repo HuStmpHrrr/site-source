@@ -151,6 +151,9 @@
                                             {% if entry.thesis.code is defined %}
                                                 <a href="{{entry.thesis.code}}">(code)</a>
                                             {% endif %}
+                                            {% if entry.thesis.slides is defined %}
+                                                <a href="{{entry.thesis.slides}}">(slides)</a>
+                                            {% endif %}
                                         </p>
                                         {% if entry.thesis.description is defined %}
                                             <p>{{entry.thesis.description}}</p>

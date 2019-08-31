@@ -5,7 +5,7 @@ emails:
   - use: personal
     address: fdhzs2010@hotmail.com
   - use: school
-    address: zs2hu@uwaterloo.ca
+    address: zhong.s.hu@mail.mcgill.ca
 social:
   linkedin: https://www.linkedin.com/in/jasonhuzs/
   github: https://github.com/HuStmpHrrr
@@ -67,6 +67,7 @@ education:
         Investigation on (un)decidability and algorithmic properties of the family of DOT calculi
       link: https://uwspace.uwaterloo.ca/handle/10012/14964
       code: https://gitlab.com/JasonHuZS/AlgDotCalculus
+      slides: /asset/thesis-prep
       abstract: >-
         Dependent Object Types, or DOT, is a family of calculi developed to study the
         Scala programming language. These calculi have path dependent types as a
