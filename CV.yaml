@@ -47,7 +47,7 @@ education:
         month: 9
         year: 2019
       to: present
-    course:
+    courses:
       - code: COMP 550
         name: Natural Language Processing
   - school: University of Waterloo
