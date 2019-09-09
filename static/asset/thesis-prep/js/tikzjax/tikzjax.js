@@ -204,7 +204,7 @@ function (_super) {
       } else {
         htmlText += String.fromCharCode(c);
       }
-    } // tfm is based on 1/2^16 pt units, rather than dviunit which is 10^âˆ’7 meters
+    } // tfm is based on 1/2^16 pt units, rather than dviunit which is 10^−7 meters
 
 
     var dviUnitsPerFontUnit = this.font.metrics.designSize / 1048576.0 * 65536 / 1048576;
@@ -19005,7 +19005,7 @@ SafeBuffer.allocUnsafeSlow = function (size) {
     // For web workers, where supported
     installMessageChannelImplementation();
   } else if (doc && "onreadystatechange" in doc.createElement("script")) {
-    // For IE 6â€“8
+    // For IE 6–8
     installReadyStateChangeImplementation();
   } else {
     // For older browsers
@@ -21861,9 +21861,9 @@ var coredump;
 var code;
 
 async function load() {
-  let tex = await fetch(urlRoot + '/ef253ef29e2f057334f77ead7f06ed8f22607d38.wasm');
+  let tex = await fetch('js/tikzjax/ef253ef29e2f057334f77ead7f06ed8f22607d38.wasm');
   code = await tex.arrayBuffer();
-  let response = await fetch_readablestream__WEBPACK_IMPORTED_MODULE_5___default()(urlRoot + '/7620f557a41f2bf40820e76ba1fd4d89a484859d.gz');
+  let response = await fetch_readablestream__WEBPACK_IMPORTED_MODULE_5___default()('js/tikzjax/7620f557a41f2bf40820e76ba1fd4d89a484859d.gz');
   const reader = response.body.getReader();
   const inf = new pako__WEBPACK_IMPORTED_MODULE_3___default.a.Inflate();
 
