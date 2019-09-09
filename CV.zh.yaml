@@ -44,6 +44,8 @@ education:
         year: 2019
       to: present
     course:
+      - code: COMP 550
+        name: Natural Language Processing
   - school: 滑铁卢大学
     location: 加拿大，安大略省，滑铁卢
     degree: 数学硕士

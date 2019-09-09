@@ -48,6 +48,8 @@ education:
         year: 2019
       to: present
     course:
+      - code: COMP 550
+        name: Natural Language Processing
   - school: University of Waterloo
     location: Waterloo, ON
     degree: Master of Mathematics
