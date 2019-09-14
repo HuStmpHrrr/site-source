@@ -129,6 +129,16 @@ education:
         year: 2014
 
 teaching:
+  - school: 麦吉尔大学
+    location: 加拿大，魁北克省，蒙特利尔
+    position: 助教
+    span:
+      from:
+        month: 9
+        year: 2019
+      to: present
+    description: >-
+      COMP 360, Algorithm Design （算法设计）
   - school : 滑铁卢大学
     location: 加拿大，安大略省，滑铁卢
     position: 助教 / Instructional Apprendice
