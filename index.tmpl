@@ -234,9 +234,12 @@
                                         <p class="paragraph keep-space">{{entry.abstract | replace("\n", "<br/>")}}</p>
                                     </div>
                                 {% endif %}
-
                             </div>
                             
+                            <div class="resume-date text-md-right">
+                                <span class="text-primary">{{entry.year}}</span>
+                            </div>
+
                         </div>
                     {% endfor %}
                 </div>
