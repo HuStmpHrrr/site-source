@@ -213,7 +213,7 @@
                                     {% endif %}
                                 </h4>
                                 <h5 class="mb-1" style="display: inline">{{entry.appearance}}</h5>
-                                <div class="subheading mb-3">{{entry.authors}}</div>
+                                <div class="subheading">{{entry.authors}}</div>
                                 <div>
                                     {% if entry.doi is defined %}
                                         <a href="{{entry.doi}}">(doi)</a>
@@ -225,11 +225,11 @@
                                         <a href="{{entry.artifact}}">(artifact)</a>
                                     {% endif %}
                                     {% if entry.bibtex is defined %}
-                                        <a class="bibtex" data-toggle="tooltip" data-placement="bottom" title="{{entry.bibtex}}">(bibtex)</a>
+                                        <a class="bibtex" href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="{{entry.bibtex}}">(bibtex)</a>
                                     {% endif %}
                                 </div>
                                 {% if entry.abstract is defined %}
-                                    <div>
+                                    <div style="min-width: 300px;">
                                         <div class="abstract-hideshow" data-toggle="tooltip" data-placement="left" title="Click me">Abstract</div>
                                         <p class="paragraph keep-space">{{entry.abstract | replace("\n", "<br/>")}}</p>
                                     </div>
@@ -383,7 +383,7 @@
              $('[data-toggle="tooltip"]').tooltip();
          });
          $(document).ready(function(){
-             $(".publications a.bibtex").click(function(event){
+             $("#publications a.bibtex").click(function(event){
                  var target = $(event.target);
                  var tooltipid = target.attr('aria-describedby');
                  var tooltip = $("#" + tooltipid);
@@ -399,11 +399,12 @@
 
                      $(".bibtex.alert.alert-dismissible").remove();
                      
-                     var elem = `<div class="bibtex alert alert-success alert-dismissible">
+                     var elem = $(`<div class="bibtex alert alert-success alert-dismissible">
                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                        <strong>Bibtex is copied!</strong>
-                     </div>`;
+                     </div>`);
                      target.after(elem);
+                     setTimeout(function() { elem.slideUp(500); }, 1000);
                  }
                  catch (err) { }
                  
