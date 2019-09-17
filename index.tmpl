@@ -383,7 +383,7 @@
              $('[data-toggle="tooltip"]').tooltip();
          });
          $(document).ready(function(){
-             $(".publications a.bibtex".click(function(event){
+             $(".publications a.bibtex").click(function(event){
                  var target = $(event.target);
                  var tooltipid = target.attr('aria-describedby');
                  var tooltip = $("#" + tooltipid);
@@ -399,16 +399,16 @@
 
                      $(".bibtex.alert.alert-dismissible").remove();
                      
-                     var elem = '<div class="bibtex alert alert-success alert-dismissible">
+                     var elem = `<div class="bibtex alert alert-success alert-dismissible">
                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                        <strong>Bibtex is copied!</strong>
-                     </div>'
+                     </div>`;
                      target.after(elem);
                  }
                  catch (err) { }
                  
-             }))
-         })
+             })
+         });
         </script>
         
         {% block additionalJs %}
