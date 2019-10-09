@@ -205,14 +205,14 @@
                     {% for entry in publications %}
                         <div class="resume-item d-flex flex-column flex-md-row mb-5">
                             <div class="resume-content mr-auto">
-                                <h4 class="mb-1" style="display: inline; padding-right: 20px">
+                                <h3 class="mb-1" style="display: inline; padding-right: 20px">
                                     {% if entry.pdf is defined %}
                                         <a href="{{entry.pdf}}">{{entry.title}}</a>
                                     {% else %}
                                         {{entry.title}}
                                     {% endif %}
-                                </h4>
-                                <h5 class="mb-1" style="display: inline">{{entry.appearance}}</h5>
+                                </h3>
+                                <h4 class="mb-1" style="display: inline">{{entry.appearance}}</h4>
                                 <div class="subheading">{{entry.authors}}</div>
                                 <div>
                                     {% if entry.doi is defined %}

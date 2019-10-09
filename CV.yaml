@@ -133,6 +133,12 @@ education:
         month: 7
         year: 2014
 
+publications:
+  - title: Undecidability of D<sub>&lt;:</sub> and Its Decidable Fragments (To Appear)
+    appearance: POPL'20
+    year: 2020
+    authors: Jason Hu and Ondřej Lhoták
+      
 teaching:
   - school: McGill University
     location: Montreal, QC

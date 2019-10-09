@@ -128,6 +128,12 @@ education:
         month: 7
         year: 2014
 
+publications:
+  - title: Undecidability of D<sub>&lt;:</sub> and Its Decidable Fragments (即将发表)
+    appearance: POPL'20
+    year: 2020
+    authors: Jason Hu and Ondřej Lhoták
+
 teaching:
   - school: 麦吉尔大学
     location: 加拿大，魁北克省，蒙特利尔
