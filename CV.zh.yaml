@@ -133,6 +133,7 @@ publications:
     appearance: POPL'20
     year: 2020
     authors: Jason Hu and Ondřej Lhoták
+    artifact: popl20-artifact/
 
 teaching:
   - school: 麦吉尔大学
