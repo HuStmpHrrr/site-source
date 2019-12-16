@@ -50,6 +50,7 @@ education:
     courses:
       - code: COMP 550
         name: Natural Language Processing
+        report: /asset/pdf/comp550.pdf
   - school: University of Waterloo
     location: Waterloo, ON
     degree: Master of Mathematics
@@ -134,11 +135,13 @@ education:
         year: 2014
 
 publications:
-  - title: Undecidability of D<sub>&lt;:</sub> and Its Decidable Fragments (To Appear)
+  - title: Undecidability of D<sub>&lt;:</sub> and Its Decidable Fragments (Distinguished) (To Appear)
     appearance: POPL'20
     year: 2020
     authors: Jason Hu and Ondřej Lhoták
     artifact: popl20-artifact/
+    doi: https://doi.org/10.1145/3371077
+    pdf: /asset/papers/popl20.pdf
       
 teaching:
   - school: McGill University
@@ -245,7 +248,6 @@ others: >-
 interests: >-
   I like superheroes, Marvel, DC and whatever you can name.
 
-  I used to play badminton during undergrad at Fudan with friends, but it turns out
-  that it's hard to even find a reasonable court and shop for maintenance in Canada!
+  I played a lot of badminton during my undergrad, and now I resume to play again in Badminton Montreal!
 
   I have lots of video games in my Steam library, and I dream to have time to play!

@@ -46,6 +46,7 @@ education:
     courses:
       - code: COMP 550
         name: Natural Language Processing
+        report: /asset/pdf/comp550.pdf
   - school: 滑铁卢大学
     location: 加拿大，安大略省，滑铁卢
     degree: 数学硕士
@@ -129,11 +130,13 @@ education:
         year: 2014
 
 publications:
-  - title: Undecidability of D<sub>&lt;:</sub> and Its Decidable Fragments (即将发表)
+  - title: Undecidability of D<sub>&lt;:</sub> and Its Decidable Fragments （优秀论文） （即将发表）
     appearance: POPL'20
     year: 2020
     authors: Jason Hu and Ondřej Lhoták
     artifact: popl20-artifact/
+    doi: https://doi.org/10.1145/3371077
+    pdf: /asset/papers/popl20.pdf
 
 teaching:
   - school: 麦吉尔大学
