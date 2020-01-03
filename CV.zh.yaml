@@ -37,7 +37,7 @@ education:
     location: 加拿大，魁北克，蒙特利尔
     degree: 哲学博士
     subject: 计算机科学
-    grade: NA
+    grade: 4.0/4.0
     span:
       from:
         month: 9
@@ -47,6 +47,10 @@ education:
       - code: COMP 550
         name: Natural Language Processing
         report: /asset/pdf/comp550.pdf
+      - code: COMP 520
+        name: Compiler Design
+      - code: COMP 596
+        name: Topics in Computer Science 3
   - school: 滑铁卢大学
     location: 加拿大，安大略省，滑铁卢
     degree: 数学硕士
@@ -130,7 +134,7 @@ education:
         year: 2014
 
 publications:
-  - title: Undecidability of D<sub>&lt;:</sub> and Its Decidable Fragments （优秀论文） （即将发表）
+  - title: Undecidability of D<sub>&lt;:</sub> and Its Decidable Fragments （优秀论文）
     appearance: POPL'20
     year: 2020
     authors: Jason Hu and Ondřej Lhoták
