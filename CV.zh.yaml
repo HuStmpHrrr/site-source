@@ -142,6 +142,24 @@ publications:
     doi: https://doi.org/10.1145/3371077
     pdf: /asset/papers/popl20.pdf
     slides: /asset/slides/popl20.pdf
+    bibtex: |
+      @article{10.1145/3371077,
+      author = {Hu, Jason Z. S. and Lhot\'{a}k, Ond\v{r}ej},
+      title = {Undecidability of D<: And Its Decidable Fragments},
+      year = {2019},
+      issue_date = {January 2020},
+      publisher = {Association for Computing Machinery},
+      address = {New York, NY, USA},
+      volume = {4},
+      number = {POPL},
+      url = {https://doi.org/10.1145/3371077},
+      doi = {10.1145/3371077},
+      journal = {Proc. ACM Program. Lang.},
+      month = dec,
+      articleno = {Article 9},
+      numpages = {30},
+      keywords = {Algorithmic Typing, Dependent Object Types, Undecidability, $D_{<:}$}
+      }
 
 teaching:
   - school: 麦吉尔大学
