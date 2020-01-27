@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    {% set itemLabels = ["about", "education", "publications", "teaching", "activities", "industry", "others", "interests"] %}
+    {% set itemLabels = ["about", "education", "publications", "teaching", "activities", "industry", "others"] %}
     {% set titles = namespace() %}
     {% block sections %}
         {% set titles.mappings = {"about": "About", "education": "Education",
             "publications": "publications",
             "teaching": "Teaching", "activities": "Activities",
-            "industry": "Industry", "others": "Other Info", "interests": "Interests"} %}
+            "industry": "Industry", "others": "Other Info"} %}
     {% endblock %}    
     <head>
 
@@ -61,6 +61,13 @@
          .abstract-hideshow + p {
              background-color: #CDD4D74D;
          }
+
+         .tooltip-inner {
+             white-space:pre;
+             max-width:none;
+             text-align: left;
+         }
+
         </style>
 
     </head>
@@ -224,6 +231,9 @@
                                     {% if entry.artifact is defined %}
                                         <a href="{{entry.artifact}}">(artifact)</a>
                                     {% endif %}
+                                    {% if entry.slides is defined %}
+                                        <a href="{{entry.slides}}">(slides)</a>
+                                    {% endif %}
                                     {% if entry.bibtex is defined %}
                                         <a class="bibtex" href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="{{entry.bibtex}}">(bibtex)</a>
                                     {% endif %}
@@ -339,15 +349,6 @@
                     <h2 class="mb-5">{{titles.mappings['others']}}</h2>
 
                     <p class="writing paragraph mb-0">{{others | replace("\n", "<br/>")}}</p>
-                </div>
-            </section>
-
-            <hr class="m-0">
-
-            <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
-                <div class="my-auto">
-                    <h2 class="mb-5">{{titles.mappings['interests']}}</h2>
-                    <p class="writing paragraph mb-0">{{interests | replace("\n", "<br/>")}}</p>
                 </div>
             </section>
 

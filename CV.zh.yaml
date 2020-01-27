@@ -141,6 +141,7 @@ publications:
     artifact: popl20-artifact/
     doi: https://doi.org/10.1145/3371077
     pdf: /asset/papers/popl20.pdf
+    slides: /asset/slides/popl20.pdf
 
 teaching:
   - school: 麦吉尔大学
@@ -169,6 +170,10 @@ teaching:
       CS 343, Concurrent and Parallel Programming （并发和并行编程）
 
 activities:
+  - kind: Conference
+    name: POPL 2020
+    period: 01/19/2020-01/25/2020
+    position: 学生志愿者
   - kind: Summer school
     name: Oregon Programming Languages Summer School
     position: 学生
@@ -243,5 +248,4 @@ others: >-
   <a href="https://en.wikipedia.org/wiki/Foshan">佛山</a>人；不，我不会打<a
   href="https://en.wikipedia.org/wiki/Wing_Chun">咏春</a>。
       
-interests: >-
-  电子游戏；羽毛球；看电影。但是读硕以后基本没有闲暇功夫了。
+  我喜欢玩电子游戏，打羽毛球和看电影。但是读硕以后基本没有闲暇功夫了。
