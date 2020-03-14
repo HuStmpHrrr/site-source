@@ -189,6 +189,10 @@ teaching:
 
 activities:
   - kind: Conference
+    name: ICFP 2020
+    period: 2020 夏天
+    position: artifact evaluation committee member
+  - kind: Conference
     name: POPL 2020
     period: 01/19/2020-01/25/2020
     position: 学生志愿者
