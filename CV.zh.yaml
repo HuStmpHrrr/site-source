@@ -140,7 +140,7 @@ publications:
     appearance: POPL'20
     year: 2020
     authors: Jason Hu and Ondřej Lhoták
-    artifact: popl20-artifact/
+    artifact: /popl20-artifact/
     doi: https://doi.org/10.1145/3371077
     pdf: /asset/papers/popl20.pdf
     slides: /asset/slides/popl20.pdf
