@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    {% set itemLabels = ["about", "education", "publications", "teaching", "activities", "industry", "others"] %}
+    {% set itemLabels = ["about", "education", "publications", "teaching", "activities", "industry", "scholarships", "others"] %}
     {% set titles = namespace() %}
     {% block sections %}
         {% set titles.mappings = {"about": "About", "education": "Education",
             "publications": "publications",
             "teaching": "Teaching", "activities": "Activities",
-            "industry": "Industry", "others": "Other Info"} %}
+            "industry": "Industry", "scholarships" : "Scholarships", "others": "Other Info"} %}
     {% endblock %}    
     <head>
 
@@ -336,6 +336,39 @@
                                 {% endif %}
                                 <span class="text-primary">{{"%s - %s" | format(fromStr, toStr)}}</span>
                             </div>
+                        </div>
+                    {% endfor %}
+                </div>
+
+            </section>
+
+            <hr class="m-0">
+
+            <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="scholarships">
+                <div class="my-auto">
+                    <h2 class="mb-5">{{titles.mappings['scholarships']}}</h2>
+
+                    {% for entry in scholarships %}
+                        <div class="resume-item d-flex flex-column flex-md-row">
+                            <div class="resume-content mr-auto">
+                                {% if entry.accepted %}
+                                    <h3 class="mb-0">{{entry.name}}</h3>
+                                {% else %}
+                                    <h3 class="mb-0">{{entry.name}} (Rejected)</h3>
+                                {% endif %}
+                                <h4 class="mb-1" style="display: inline">{{entry.issuer}}</h4>
+                            </div>
+                            {% if entry.accepted %}
+                            <div class="resume-date text-md-right">
+                                {% set fromStr = "%02d / %d" | format(entry.span.from.month, entry.span.from.year) %}
+                                {% if entry.span.to.month is defined %}
+                                    {% set toStr = "%02d / %d" | format(entry.span.to.month, entry.span.to.year) %}
+                                {% else  %}
+                                    {% set toStr = entry.span.to %}
+                                {% endif %}
+                                <span class="text-primary">{{"%s - %s" | format(fromStr, toStr)}}</span>
+                            </div>
+                            {% endif %}
                         </div>
                     {% endfor %}
                 </div>

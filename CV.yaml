@@ -272,6 +272,22 @@ industry:
         month: 8
         year: 2013
 
+scholarships:
+  - name: Postgraduate Scholarships-Doctoral
+    issuer: NSERC
+    accepted: true
+    span:
+      from:
+        month: 9
+        year: 2020
+      to:
+        month: 8
+        year: 2023
+
+  - name: Doctoral (B2X) Research Scholarship
+    issuer: FRQNT
+    accepted: false
+
 others: >-
   I speak four languages: English, Mandarin, Cantonese and Japanese.
 

@@ -264,6 +264,22 @@ industry:
         month: 8
         year: 2013
 
+scholarships:
+  - name: Postgraduate Scholarships-Doctoral
+    issuer: NSERC
+    accepted: true
+    span:
+      from:
+        month: 9
+        year: 2020
+      to:
+        month: 8
+        year: 2023
+
+  - name: Doctoral (B2X) Research Scholarship
+    issuer: FRQNT
+    accepted: false
+
 others: >-
   我有时后会在知乎回答编程语言相关的问题。欢迎关注我的知乎帐号（链接在上面）。
 
