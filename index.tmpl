@@ -351,24 +351,22 @@
                     {% for entry in scholarships %}
                         <div class="resume-item d-flex flex-column flex-md-row">
                             <div class="resume-content mr-auto">
-                                {% if entry.accepted %}
-                                    <h3 class="mb-0">{{entry.name}}</h3>
-                                {% else %}
-                                    <h3 class="mb-0">{{entry.name}} (Rejected)</h3>
-                                {% endif %}
+                                <h3 class="mb-0">{{entry.name}}</h3>
                                 <h4 class="mb-1" style="display: inline">{{entry.issuer}}</h4>
                             </div>
-                            {% if entry.accepted %}
                             <div class="resume-date text-md-right">
-                                {% set fromStr = "%02d / %d" | format(entry.span.from.month, entry.span.from.year) %}
-                                {% if entry.span.to.month is defined %}
-                                    {% set toStr = "%02d / %d" | format(entry.span.to.month, entry.span.to.year) %}
-                                {% else  %}
-                                    {% set toStr = entry.span.to %}
+                                {% if entry.accepted %}
+                                    {% set fromStr = "%02d / %d" | format(entry.span.from.month, entry.span.from.year) %}
+                                    {% if entry.span.to.month is defined %}
+                                        {% set toStr = "%02d / %d" | format(entry.span.to.month, entry.span.to.year) %}
+                                    {% else  %}
+                                        {% set toStr = entry.span.to %}
+                                    {% endif %}
+                                    <span class="text-primary">{{"%s - %s" | format(fromStr, toStr)}}</span>
+                                {% else %}
+                                    <span class="text-primary">offer rejected</span>
                                 {% endif %}
-                                <span class="text-primary">{{"%s - %s" | format(fromStr, toStr)}}</span>
                             </div>
-                            {% endif %}
                         </div>
                     {% endfor %}
                 </div>
