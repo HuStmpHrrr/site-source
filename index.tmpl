@@ -183,6 +183,9 @@
                                                     {% if course.report is defined %}
                                                         <a href="{{course.report}}">(report)</a>
                                                     {% endif %}
+                                                    {% if course.source is defined %}
+                                                        <a href="{{course.source}}">(code)</a>
+                                                    {% endif %}
                                                 </li>
                                             {% endfor %}
                                         </ul>

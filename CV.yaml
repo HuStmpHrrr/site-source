@@ -56,6 +56,8 @@ education:
         report: /asset/pdf/comp550.pdf
       - code: COMP 520
         name: Compiler Design
+        source: https://github.com/HuStmpHrrr/GoLite2LLVM
+        report: /asset/pdf/comp520.pdf
       - code: COMP 596
         name: Topics in Computer Science 3
   - school: University of Waterloo
