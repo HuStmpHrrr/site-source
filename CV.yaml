@@ -60,6 +60,7 @@ education:
         report: /asset/pdf/comp520.pdf
       - code: COMP 596
         name: Topics in Computer Science 3
+        report: /asset/pdf/comp596.pdf
   - school: University of Waterloo
     location: Waterloo, ON
     degree: Master of Mathematics
