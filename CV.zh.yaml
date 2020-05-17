@@ -206,10 +206,6 @@ activities:
     position: 学生
     period: 2019
     description: 带奖学金
-  - kind: Society
-    name: 美国数学学会
-    position: 学生会员
-    period : 2018
   - kind: Summer school
     name: DeepSpec Summer School
     position: 学生

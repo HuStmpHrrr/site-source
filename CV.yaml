@@ -214,10 +214,6 @@ activities:
     period: 2019
     position: student
     description: with fellowship
-  - kind: Society
-    name: American Mathematical Society
-    position: student member
-    period : 2018
   - kind: Summer school
     name: DeepSpec Summer School
     period: 2018
