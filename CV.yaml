@@ -281,7 +281,7 @@ industry:
 
 scholarships:
   - name: Postgraduate Scholarships-Doctoral
-    issuer: NSERC
+    issuer: Natural Sciences and Engineering Research Council (NSERC)
     accepted: true
     span:
       from:
@@ -292,7 +292,7 @@ scholarships:
         year: 2023
 
   - name: Doctoral (B2X) Research Scholarship
-    issuer: FRQNT
+    issuer: Fonds de recherche du Québec - Nature et technologies (FRQNT)
     accepted: true
     span:
       from:
@@ -301,6 +301,16 @@ scholarships:
       to:
         month: 8
         year: 2024
+  - name: the Charity Exercise Award
+    issuer: School of Computer Science, McGill University
+    accepted: true
+    span:
+      from:
+        month: 1
+        year: 2020
+      to:
+        month: 4
+        year: 2020
 
 others: >-
   I speak four languages: English, Mandarin, Cantonese and Japanese.
