@@ -212,14 +212,16 @@ activities:
     period: 2018
 
 industry:
-  - company: 亚马逊
+  - company: AWS
     location: 加拿大，魁北克省，蒙特利尔
     position: Applied Scientist Intern
     span:
       from:
         month: 5
         year: 2020
-      to: now
+      to:
+        month: 8
+        year: 2020
   - company: 摩根士丹利
     location: 加拿大，魁北克省，蒙特利尔
     position: Summer Analyst Intern

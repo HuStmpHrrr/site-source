@@ -220,14 +220,16 @@ activities:
     position: student
 
 industry:
-  - company: Amazon
+  - company: Amazon Web Service
     location: Montreal, QC
     position: Applied Scientist Intern
     span:
       from:
         month: 5
         year: 2020
-      to: now
+      to:
+        month: 8
+        year: 2020
   - company: Morgan Stanley Services Canada Corp.
     location: Montreal, QC
     position: Summer Analyst Intern
