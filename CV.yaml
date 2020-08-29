@@ -303,6 +303,16 @@ scholarships:
       to:
         month: 8
         year: 2024
+  - name: Trottier Accelerator Award
+    issuer: School of Computer Science, McGill University
+    accepted: true
+    span:
+      from:
+        month: 9
+        year: 2020
+      to:
+        month: 8
+        year: 2021
   - name: the Charity Exercise Award
     issuer: School of Computer Science, McGill University
     accepted: true
