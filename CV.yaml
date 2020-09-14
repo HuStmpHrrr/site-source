@@ -61,6 +61,11 @@ education:
       - code: COMP 596
         name: Topics in Computer Science 3
         report: /asset/pdf/comp596.pdf
+      - code: COMP 700
+        name: Comprehensive Examination
+      - code: IFT 6172
+        name: Semantics of programming languages (at University of Montreal)
+
   - school: University of Waterloo
     location: Waterloo, ON
     degree: Master of Mathematics

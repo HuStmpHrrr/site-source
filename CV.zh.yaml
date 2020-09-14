@@ -56,6 +56,11 @@ education:
       - code: COMP 596
         name: Topics in Computer Science 3
         report: /asset/pdf/comp596.pdf
+      - code: COMP 700
+        name: Comprehensive Examination
+      - code: IFT 6172
+        name: Semantics of programming languages (蒙特利尔大学)
+
   - school: 滑铁卢大学
     location: 加拿大，安大略省，滑铁卢
     degree: 数学硕士
