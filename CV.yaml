@@ -63,6 +63,7 @@ education:
         report: /asset/pdf/comp596.pdf
       - code: COMP 700
         name: Comprehensive Examination
+        report: /asset/pdf/comp-exam.pdf
       - code: IFT 6172
         name: Semantics of programming languages (at University of Montreal)
 
