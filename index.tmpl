@@ -119,7 +119,7 @@
                     {% endblock %}
                     <div class="subheading mb-5" id="emails">
                         {% for email in emails %}
-                            <a href="mailto:{{email.address}}">{{email.address}}({{email.use}})</a>
+                            <a href="javascript:void(0)">{{email.address}}({{email.use}})</a>
                         {% endfor %}
                     </div>
                     <p class="lead mb-5 paragraph">{{description | replace("\n", "<br/>")}}</p>
