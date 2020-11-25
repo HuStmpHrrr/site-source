@@ -145,7 +145,12 @@ education:
         year: 2014
 
 publications:
-  - title: Undecidability of D<sub>&lt;:</sub> and Its Decidable Fragments （优秀论文）
+  - title: Formalizing of Category Theory in Agda
+    appearance: CPP'21
+    year: 2021
+    authors: Jason Hu and Jacques Carette
+    artifact: https://github.com/agda/agda-categories
+- title: Undecidability of D<sub>&lt;:</sub> and Its Decidable Fragments （优秀论文）
     appearance: POPL'20
     year: 2020
     authors: Jason Hu and Ondřej Lhoták
@@ -172,12 +177,6 @@ publications:
       keywords = {Algorithmic Typing, Dependent Object Types, Undecidability, $D_{<:}$}
       }
       
-  - title: Formalizing of Category Theory in Agda
-    appearance: CPP'20
-    year: 2021
-    authors: Jason Hu and Jacques Carette
-    artifact: https://github.com/agda/agda-categories
-
 teaching:
   - school: 麦吉尔大学
     location: 加拿大，魁北克省，蒙特利尔
