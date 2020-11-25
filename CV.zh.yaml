@@ -171,6 +171,12 @@ publications:
       numpages = {30},
       keywords = {Algorithmic Typing, Dependent Object Types, Undecidability, $D_{<:}$}
       }
+      
+  - title: Formalizing of Category Theory in Agda
+    appearance: CPP'20
+    year: 2021
+    authors: Jason Hu and Jacques Carette
+    artifact: https://github.com/agda/agda-categories
 
 teaching:
   - school: 麦吉尔大学
