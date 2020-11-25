@@ -150,7 +150,7 @@ publications:
     year: 2021
     authors: Jason Hu and Jacques Carette
     artifact: https://github.com/agda/agda-categories
-- title: Undecidability of D<sub>&lt;:</sub> and Its Decidable Fragments （优秀论文）
+  - title: Undecidability of D<sub>&lt;:</sub> and Its Decidable Fragments （优秀论文）
     appearance: POPL'20
     year: 2020
     authors: Jason Hu and Ondřej Lhoták
