@@ -61,6 +61,8 @@ education:
         report: /asset/pdf/comp-exam.pdf
       - code: IFT 6172
         name: Semantics of programming languages (蒙特利尔大学)
+        report: /asset/pdf/ift6172.pdf
+        source: https://gitlab.com/JasonHuZS/typer/-/tree/tp/ift6172-2020
 
   - school: 滑铁卢大学
     location: 加拿大，安大略省，滑铁卢
