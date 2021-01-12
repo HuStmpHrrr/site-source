@@ -154,6 +154,7 @@ publications:
     artifact: https://github.com/agda/agda-categories
     pdf: /asset/papers/cpp21.pdf
     slides: /asset/slides/cpp21.pdf
+    talk: https://youtu.be/a2txkoybw2M
 
   - title: Undecidability of D<sub>&lt;:</sub> and Its Decidable Fragments （优秀论文）
     appearance: POPL'20
@@ -163,6 +164,7 @@ publications:
     doi: https://doi.org/10.1145/3371077
     pdf: /asset/papers/popl20.pdf
     slides: /asset/slides/popl20.pdf
+    talk: https://youtu.be/7CO-zPV8Lko
     bibtex: |
       @article{10.1145/3371077,
       author = {Hu, Jason Z. S. and Lhot\'{a}k, Ond\v{r}ej},

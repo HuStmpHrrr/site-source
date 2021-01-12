@@ -237,6 +237,9 @@
                                     {% if entry.slides is defined %}
                                         <a href="{{entry.slides}}">(slides)</a>
                                     {% endif %}
+                                    {% if entry.talk is defined %}
+                                        <a href="{{entry.talk}}">(talk)</a>
+                                    {% endif %}
                                     {% if entry.bibtex is defined %}
                                         <a class="bibtex" href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="{{entry.bibtex}}">(bibtex)</a>
                                     {% endif %}
