@@ -159,6 +159,7 @@ publications:
     authors: Jason Hu and Jacques Carette
     artifact: https://github.com/agda/agda-categories
     pdf: /asset/papers/cpp21.pdf
+    slides: /asset/slides/cpp21.pdf
     
   - title: Undecidability of D<sub>&lt;:</sub> and Its Decidable Fragments (Distinguished)
     appearance: POPL'20
@@ -341,6 +342,8 @@ scholarships:
 
 others: >-
   I speak four languages: English, Mandarin, Cantonese and Japanese.
+
+  I am actively learning French at McGill now!
 
   I had 6 years of math, 2 years of physics and 1 year of chemistry olympiads experience.
 

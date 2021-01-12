@@ -153,6 +153,7 @@ publications:
     authors: Jason Hu and Jacques Carette
     artifact: https://github.com/agda/agda-categories
     pdf: /asset/papers/cpp21.pdf
+    slides: /asset/slides/cpp21.pdf
 
   - title: Undecidability of D<sub>&lt;:</sub> and Its Decidable Fragments （优秀论文）
     appearance: POPL'20
