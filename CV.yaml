@@ -239,6 +239,10 @@ teaching:
 
 activities:
   - kind: Conference
+    name: ICFP 2021
+    period: summer 2021
+    position: artifact evaluation committee member
+  - kind: Conference
     name: ICFP 2020
     period: summer 2020
     position: artifact evaluation committee member
