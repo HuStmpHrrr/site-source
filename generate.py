@@ -22,10 +22,10 @@ def main():
     tmpl = env.get_template(os.path.basename(result.template))
 
     if result.output is None:
-        print tmpl.render(**cv).encode('UTF-8')
+        print(tmpl.render(**cv))
     else:
-        with open(result.output, 'wb') as fd:
-            fd.write(tmpl.render(**cv).encode('UTF-8'))
+        with open(result.output, 'w') as fd:
+            fd.write(tmpl.render(**cv))
 
 
 if __name__ == '__main__':
