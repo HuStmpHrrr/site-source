@@ -59,7 +59,7 @@ education:
         source: https://github.com/HuStmpHrrr/GoLite2LLVM
         report: /asset/pdf/comp520.pdf
       - code: COMP 596
-        name: Topics in Computer Science 3
+        name: Topics in Computer Science 3 (Theoretical Foundations of Reliable Meta-programming)
         report: /asset/pdf/comp596.pdf
       - code: COMP 700
         name: Comprehensive Examination
@@ -224,6 +224,8 @@ teaching:
       COMP 302, Programming Languages and Paradigms
 
       COMP 527, Logic and Computation
+
+      COMP 523, Language-based Security
     
   - school: University of Waterloo
     location: Waterloo, ON
