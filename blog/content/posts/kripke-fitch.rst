@@ -21,10 +21,13 @@ sources of inspirations.
 Kripke style, as indicated by its name, is inspired from Kripke semantics. On the
 other hand, Fitch style is popularized by Clouston, who followed Borghuis. In
 Borghuis' PhD thesis, he derived modal pure type systems (PTS) from Fitch's
-subcoordinate proof diagrams. Technically, Fitch in Fitch style really refers to the
-particular proof diagrams or form of proof presentation which Fitch invented and
-Borghuis considered. However, Fitch-style systems do not really have this form of
-subordination in their formulations, or do Fitch-style systems use context stacks as
-Borghuis originally did (he called them generalized contexts).
+subcoordinate proof diagrams. Borghuis never used Fitch style to refer to a type
+system. He only used it to refer to that particular kind of subcorrdinate proof
+diagrams. Technically, Fitch in Fitch style really denotes the particular proof
+diagrams or form of proof presentation which Fitch invented and Borghuis
+considered. However, Fitch-style systems do not really have this form of subordination
+in their formulations, nor do Fitch-style systems use context stacks as Borghuis
+originally did (he called them generalized contexts). This makes Fitch style more or
+less a historically inaccurate name, at least less accurate than Borghuis style. 
 
 **TODO: More Comparison**
