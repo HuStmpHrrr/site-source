@@ -147,6 +147,11 @@ education:
         year: 2014
 
 publications:
+  - title: A Categorical Normalization Proof for the Modal Lambda-Calculus
+    appearance: MFPS'22
+    year: 2022
+    authors: Jason Hu and Brigitte Pientka
+    artifact: Kripke-style/
   - title: Formalizing of Category Theory in Agda
     appearance: CPP'21
     year: 2021
