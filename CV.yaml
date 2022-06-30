@@ -158,6 +158,30 @@ publications:
     year: 2022
     authors: Jason Hu and Brigitte Pientka
     artifact: Kripke-style/
+  - title: A Category Theoretic View of Contextual Types
+    appearance: ToCL (May 22)
+    year: 2022
+    author: Jason Hu, Brigitte Pientka, Ulrich Schöpp
+    pdf: https://arxiv.org/pdf/2206.02831.pdf
+    doi: https://dl.acm.org/doi/10.1145/3545115
+    bibtex: |
+      @article{hu_category_2022,
+        title = {A {Category} {Theoretic} {View} of {Contextual} {Types}: from {Simple} {Types} to {Dependent} {Types}},
+        issn = {1529-3785},
+        shorttitle = {A {Category} {Theoretic} {View} of {Contextual} {Types}},
+        url = {https://doi.org/10.1145/3545115},
+        doi = {10.1145/3545115},
+        abstract = {We describe the categorical semantics for a simply typed variant and a simplified dependently typed variant of Cocon, a contextual modal type theory where the box modality mediates between the weak function space that is used to represent higher-order abstract syntax (HOAS) trees and the strong function space that describes (recursive) computations about them. What makes Cocon different from standard type theories is the presence of first-class contexts and contextual objects to describe syntax trees that are closed with respect to a given context of assumptions. Following M. Hofmann’s work, we use a presheaf model to characterise HOAS trees. Surprisingly, this model already provides the necessary structure to also model Cocon. In particular, we can capture the contextual objects of Cocon using a comonad ♭ that restricts presheaves to their closed elements. This gives a simple semantic characterisation of the invariants of contextual types (e.g. substitution invariance) and identifies Cocon as a type-theoretic syntax of presheaf models. We further extend this characterisation to dependent types using categories with families and show that we can model a fragment of Cocon without recursor in the Fitch-style dependent modal type theory presented by Birkedal et. al..},
+        urldate = {2022-06-30},
+        journal = {ACM Transactions on Computational Logic},
+        author = {Hu, Jason Z. S. and Pientka, Brigitte and Schöpp, Ulrich},
+        month = may,
+        year = {2022},
+        note = {Just Accepted},
+        keywords = {category theory, contextual types, dependent types, type theory},
+        file = {Full Text PDF:C\:\\Users\\fdhzs\\Zotero\\storage\\TCPDGQEG\\Hu et al. - 2022 - A Category Theoretic View of Contextual Types fro.pdf:application/pdf},
+        }
+    
   - title: Formalizing of Category Theory in Agda
     appearance: CPP'21
     year: 2021
