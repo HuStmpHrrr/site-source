@@ -291,7 +291,17 @@ activities:
     period: 2018
 
 industry:
-  - company: AWS
+  - company: 亚马逊云科技
+    location: 美国，麻省，波士顿
+    position: Applied Scientist Intern
+    span:
+      from:
+        month: 6
+        year: 2022
+      to:
+        month: 9
+        year: 2022
+  - company: 亚马逊云科技
     location: 加拿大，魁北克省，蒙特利尔
     position: Applied Scientist Intern
     span:

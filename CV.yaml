@@ -300,6 +300,16 @@ activities:
 
 industry:
   - company: Amazon Web Service
+    location: Boston, MA
+    position: Applied Scientist Intern
+    span:
+      from:
+        month: 6
+        year: 2022
+      to:
+        month: 9
+        year: 2022
+  - company: Amazon Web Service
     location: Montreal, QC
     position: Applied Scientist Intern
     span:
