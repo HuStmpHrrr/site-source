@@ -155,7 +155,7 @@ publications:
   - title: A Category Theoretic View of Contextual Types
     appearance: ToCL (May 22)
     year: 2022
-    author: Jason Hu, Brigitte Pientka, Ulrich Schöpp
+    authors: Jason Hu, Brigitte Pientka, Ulrich Schöpp
     pdf: https://arxiv.org/pdf/2206.02831.pdf
     doi: https://dl.acm.org/doi/10.1145/3545115
     bibtex: |
