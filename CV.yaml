@@ -297,6 +297,7 @@ activities:
     name: DeepSpec Summer School
     period: 2018
     position: student
+    description: with fellowship
 
 industry:
   - company: Amazon Web Service
