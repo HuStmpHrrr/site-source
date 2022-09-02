@@ -301,7 +301,7 @@ activities:
     description: with fellowship
 
 industry:
-  - company: Amazon Web Service
+  - company: Amazon Web Services
     location: Boston, MA
     position: Applied Scientist Intern
     span:
@@ -311,7 +311,7 @@ industry:
       to:
         month: 9
         year: 2022
-  - company: Amazon Web Service
+  - company: Amazon Web Services
     location: Montreal, QC
     position: Applied Scientist Intern
     span:
