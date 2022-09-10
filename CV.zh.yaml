@@ -266,6 +266,10 @@ teaching:
 
 activities:
   - kind: Conference
+    name: POPL 2023
+    period: 2022 秋天
+    position: artifact evaluation committee member
+  - kind: Conference
     name: ICFP 2021
     period: 2021 夏天
     position: artifact evaluation committee member

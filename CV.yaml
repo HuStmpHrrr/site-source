@@ -274,6 +274,10 @@ teaching:
 
 activities:
   - kind: Conference
+    name: POPL 2023
+    period: fall 2022
+    position: artifact evaluation committee member
+  - kind: Conference
     name: ICFP 2021
     period: summer 2021
     position: artifact evaluation committee member
