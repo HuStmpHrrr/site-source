@@ -151,8 +151,10 @@ publications:
     appearance: MFPS'22
     year: 2022
     authors: Jason Hu and Brigitte Pientka
+    pdf: https://arxiv.org/pdf/2211.12318.pdf
     artifact: Kripke-style/
     slides: /asset/slides/mfps22.pdf
+    
   - title: A Category Theoretic View of Contextual Types
     appearance: ToCL (May 22)
     year: 2022
