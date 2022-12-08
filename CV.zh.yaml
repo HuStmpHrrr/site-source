@@ -63,6 +63,10 @@ education:
         name: Semantics of programming languages (蒙特利尔大学)
         report: /asset/pdf/ift6172.pdf
         source: https://gitlab.com/JasonHuZS/typer/-/tree/tp/ift6172-2020
+      - code: COMP 701
+        name: Thesis Proposal and Area Examination
+        report: /asset/pdf/proposal.pdf
+        slides: /asset/pdf/proposal-slides.pdf
 
   - school: 滑铁卢大学
     location: 加拿大，安大略省，滑铁卢
