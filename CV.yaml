@@ -163,8 +163,21 @@ publications:
     year: 2022
     authors: Jason Hu and Brigitte Pientka
     pdf: https://arxiv.org/pdf/2211.12318.pdf
+    doi: https://doi.org/10.46298/entics.10360
     artifact: Kripke-style/
     slides: /asset/slides/mfps22.pdf
+    bibtex: |
+      @article{entics:10360,
+        TITLE = {{A Categorical Normalization Proof for the Modal Lambda-Calculus}},
+        AUTHOR = {Jason Z. S. Hu and Brigitte Pientka},
+        URL = {https://entics.episciences.org/10360},
+        DOI = {10.46298/entics.10360},
+        JOURNAL = {{Electronic Notes in Theoretical Informatics and Computer Science}},
+        VOLUME = {{Volume 1 - Proceedings of MFPS XXXVIII}},
+        YEAR = {2023},
+        MONTH = Feb,
+        KEYWORDS = {Computer Science - Programming Languages ; Computer Science - Logic in Computer Science ; D.3.1 ; F.4.1},
+      }
     
   - title: A Category Theoretic View of Contextual Types
     appearance: ToCL (May 22)
