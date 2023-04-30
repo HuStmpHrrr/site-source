@@ -303,6 +303,16 @@ activities:
 
 industry:
   - company: 亚马逊云科技
+    location: 美国，明尼苏达，明尼亚波利斯
+    position: Applied Scientist Intern
+    span:
+      from:
+        month: 5
+        year: 2023
+      to:
+        month: 8
+        year: 2023
+  - company: 亚马逊云科技
     location: 美国，麻省，波士顿
     position: Applied Scientist Intern
     span:

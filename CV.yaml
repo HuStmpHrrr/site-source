@@ -312,6 +312,16 @@ activities:
 
 industry:
   - company: Amazon Web Services
+    location: Minneapolis, MN
+    position: Applied Scientist Intern
+    span:
+      from:
+        month: 5
+        year: 2023
+      to:
+        month: 8
+        year: 2023
+  - company: Amazon Web Services
     location: Boston, MA
     position: Applied Scientist Intern
     span:
