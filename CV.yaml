@@ -165,6 +165,18 @@ publications:
     pdf: https://arxiv.org/pdf/2211.12318.pdf
     artifact: Kripke-style/
     slides: /asset/slides/mfps22.pdf
+    bibtex: |
+      @article{hu-mfps22,
+        TITLE = {{A Categorical Normalization Proof for the Modal Lambda-Calculus}},
+        AUTHOR = {Jason Z. S. Hu and Brigitte Pientka},
+        URL = {https://entics.episciences.org/10360},
+        DOI = {10.46298/entics.10360},
+        JOURNAL = {{Electronic Notes in Theoretical Informatics and Computer Science}},
+        VOLUME = {{Volume 1 - Proceedings of MFPS XXXVIII}},
+        YEAR = {2023},
+        MONTH = Feb,
+        KEYWORDS = {Computer Science - Programming Languages ; Computer Science - Logic in Computer Science ; D.3.1 ; F.4.1},
+      }
     
   - title: A Category Theoretic View of Contextual Types
     appearance: ToCL (May 22)
@@ -245,6 +257,53 @@ publications:
       keywords = {Algorithmic Typing, Dependent Object Types, Undecidability, $D_{<:}$}
       }
 
+techreports:
+  - title: Layered Modal Type Theories
+    year: 2023
+    authors: Jason Hu and Brigitte Pientka
+    doi: https://doi.org/10.48550/arXiv.2305.06548
+    pdf: https://arxiv.org/pdf/2305.06548.pdf
+    bibtex: |
+      @misc{hu2023layered,
+            title={Layered Modal Type Theories}, 
+            author={Jason Z. S. Hu and Brigitte Pientka},
+            year={2023},
+            eprint={2305.06548},
+            archivePrefix={arXiv},
+            primaryClass={cs.LO}
+      }
+
+  - title: An Investigation of Kripke-style Modal Type Theories
+    year: 2022
+    authors: Jason Hu and Brigitte Pientka
+    artifact: Kripke-style/
+    doi: https://doi.org/10.48550/arXiv.2206.07823
+    pdf: https://arxiv.org/pdf/2206.07823.pdf
+    bibtex: |
+      @misc{hu2023investigation,
+            title={An Investigation of Kripke-style Modal Type Theories}, 
+            author={Jason Z. S. Hu and Brigitte Pientka},
+            year={2023},
+            eprint={2206.07823},
+            archivePrefix={arXiv},
+            primaryClass={cs.LO}
+      }
+
+  - title: Internal Category with Families in Presheaves
+    year: 2021
+    authors: Jason Hu
+    doi: https://doi.org/10.48550/arXiv.2103.02024
+    pdf: https://arxiv.org/pdf/2103.02024.pdf
+    bibtex: |
+      @misc{hu2021internal,
+            title={Internal Category with Families in Presheaves}, 
+            author={Jason Z. S. Hu},
+            year={2021},
+            eprint={2103.02024},
+            archivePrefix={arXiv},
+            primaryClass={cs.LO}
+      }    
+      
 teaching:
   - school: McGill University
     location: Montreal, QC
