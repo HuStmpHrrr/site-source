@@ -151,6 +151,12 @@ education:
         year: 2014
 
 publications:
+  - title: Normalization by Evaluation for Modal Dependent Type Theory
+    appearance: JFP
+    year: 2023
+    authors: Jason Hu, Junyoung Jang, Brigitte Pientka
+    artifact: Kripke-style/
+  
   - title: A Categorical Normalization Proof for the Modal Lambda-Calculus
     appearance: MFPS'22
     year: 2022
