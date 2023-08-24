@@ -167,7 +167,7 @@ publications:
     artifact: Kripke-style/
     slides: /asset/slides/mfps22.pdf
     bibtex: |
-      @article{entics:10360,
+      @article{hu-mfps22,
         TITLE = {{A Categorical Normalization Proof for the Modal Lambda-Calculus}},
         AUTHOR = {Jason Z. S. Hu and Brigitte Pientka},
         URL = {https://entics.episciences.org/10360},
@@ -258,6 +258,53 @@ publications:
       keywords = {Algorithmic Typing, Dependent Object Types, Undecidability, $D_{<:}$}
       }
 
+techreports:
+  - title: Layered Modal Type Theories
+    year: 2023
+    authors: Jason Hu and Brigitte Pientka
+    doi: https://doi.org/10.48550/arXiv.2305.06548
+    pdf: https://arxiv.org/pdf/2305.06548.pdf
+    bibtex: |
+      @misc{hu2023layered,
+            title={Layered Modal Type Theories}, 
+            author={Jason Z. S. Hu and Brigitte Pientka},
+            year={2023},
+            eprint={2305.06548},
+            archivePrefix={arXiv},
+            primaryClass={cs.LO}
+      }
+
+  - title: An Investigation of Kripke-style Modal Type Theories
+    year: 2022
+    authors: Jason Hu and Brigitte Pientka
+    artifact: Kripke-style/
+    doi: https://doi.org/10.48550/arXiv.2206.07823
+    pdf: https://arxiv.org/pdf/2206.07823.pdf
+    bibtex: |
+      @misc{hu2023investigation,
+            title={An Investigation of Kripke-style Modal Type Theories}, 
+            author={Jason Z. S. Hu and Brigitte Pientka},
+            year={2023},
+            eprint={2206.07823},
+            archivePrefix={arXiv},
+            primaryClass={cs.LO}
+      }
+
+  - title: Internal Category with Families in Presheaves
+    year: 2021
+    authors: Jason Hu
+    doi: https://doi.org/10.48550/arXiv.2103.02024
+    pdf: https://arxiv.org/pdf/2103.02024.pdf
+    bibtex: |
+      @misc{hu2021internal,
+            title={Internal Category with Families in Presheaves}, 
+            author={Jason Z. S. Hu},
+            year={2021},
+            eprint={2103.02024},
+            archivePrefix={arXiv},
+            primaryClass={cs.LO}
+      }    
+      
 teaching:
   - school: McGill University
     location: Montreal, QC
@@ -324,6 +371,16 @@ activities:
     description: with fellowship
 
 industry:
+  - company: Amazon Web Services
+    location: Minneapolis, MN
+    position: Applied Scientist Intern
+    span:
+      from:
+        month: 5
+        year: 2023
+      to:
+        month: 8
+        year: 2023
   - company: Amazon Web Services
     location: Boston, MA
     position: Applied Scientist Intern
