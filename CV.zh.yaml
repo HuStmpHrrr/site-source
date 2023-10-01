@@ -155,7 +155,7 @@ publications:
     appearance: JFP
     year: 2023
     authors: Jason Hu, Junyoung Jang, Brigitte Pientka
-    artifact: Kripke-style/
+    artifact: /Kripke-style/
   
   - title: A Categorical Normalization Proof for the Modal Lambda-Calculus
     appearance: MFPS'22
@@ -163,7 +163,7 @@ publications:
     authors: Jason Hu and Brigitte Pientka
     pdf: https://arxiv.org/pdf/2211.12318.pdf
     doi: https://doi.org/10.46298/entics.10360
-    artifact: Kripke-style/
+    artifact: /Kripke-style/
     slides: /asset/slides/mfps22.pdf
     bibtex: |
       @article{hu-mfps22,
