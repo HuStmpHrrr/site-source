@@ -155,7 +155,20 @@ publications:
     appearance: JFP
     year: 2023
     authors: Jason Hu, Junyoung Jang, Brigitte Pientka
+    pdf: /asset/slides/jfp23.pdf
+    doi: https://doi.org/10.1017/S0956796823000060
     artifact: /Kripke-style/
+    bibtex: |
+      @article{hu_jang_pientka_2023,
+          title={Normalization by evaluation for modal dependent type theory},
+          volume={33},
+          DOI={10.1017/S0956796823000060},
+          journal={Journal of Functional Programming},
+          publisher={Cambridge University Press},
+          author={Hu, Jason Z. S. and Jang, Junyoung and Pientka, Brigitte},
+          year={2023},
+          pages={e7}
+      }
   
   - title: A Categorical Normalization Proof for the Modal Lambda-Calculus
     appearance: MFPS'22
