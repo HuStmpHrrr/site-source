@@ -155,7 +155,7 @@ publications:
     appearance: JFP
     year: 2023
     authors: Jason Hu, Junyoung Jang, Brigitte Pientka
-    pdf: /asset/slides/jfp23.pdf
+    pdf: /asset/papers/jfp23.pdf
     doi: https://doi.org/10.1017/S0956796823000060
     artifact: /Kripke-style/
     bibtex: |
