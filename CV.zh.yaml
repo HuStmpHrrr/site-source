@@ -151,7 +151,7 @@ education:
         year: 2014
 
 publications:
-  - title: Layered Modal Type Theory: Where Meta-programming Meets Intensional Analysis
+  - title: "Layered Modal Type Theory: Where Meta-programming Meets Intensional Analysis"
     appearance: ESOP
     year: 2024
     authors: Jason Z. S. Hu, Brigitte Pientka
