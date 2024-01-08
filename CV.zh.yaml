@@ -152,9 +152,9 @@ education:
 
 publications:
   - title: "Layered Modal Type Theory: Where Meta-programming Meets Intensional Analysis"
-    appearance: ESOP
+    appearance: ESOP'24
     year: 2024
-    authors: Jason Z. S. Hu, Brigitte Pientka
+    authors: Jason Hu and Brigitte Pientka
     artifact: /esop2024/
   - title: Normalization by Evaluation for Modal Dependent Type Theory
     appearance: JFP
