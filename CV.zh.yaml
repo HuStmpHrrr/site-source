@@ -156,6 +156,7 @@ publications:
     year: 2024
     authors: Jason Hu and Brigitte Pientka
     artifact: /esop2024/
+    pdf: /asset/papers/esop24.pdf
   - title: Normalization by Evaluation for Modal Dependent Type Theory
     appearance: JFP
     year: 2023
