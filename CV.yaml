@@ -164,6 +164,7 @@ publications:
     authors: Jason Hu and Brigitte Pientka
     artifact: /esop2024/
     pdf: /asset/papers/esop24.pdf
+    slides: /asset/slides/esop24.pdf
     doi: https://doi.org/10.1007/978-3-031-57262-3_3
     bibtex: |
       @InProceedings{10.1007/978-3-031-57262-3_3,
