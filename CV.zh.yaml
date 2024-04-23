@@ -220,7 +220,7 @@ publications:
         keywords = {category theory, contextual types, dependent types, type theory},
         }
         
-  - title: Formalizing of Category Theory in Agda
+  - title: Formalizing Category Theory in Agda
     appearance: CPP'21
     year: 2021
     authors: Jason Hu and Jacques Carette
