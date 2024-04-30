@@ -300,6 +300,20 @@ publications:
       }
 
 techreports:
+  - title: DeLaM: A Dependent Layered Modal Type Theory for Meta-programming
+    year: 2024
+    authors: Jason Hu and Brigitte Pientka
+    doi: https://arxiv.org/abs/2404.17065
+    pdf: https://arxiv.org/pdf/2404.17065
+    bibtex: |
+      @misc{hu2024delam,
+            title={DeLaM: A Dependent Layered Modal Type Theory for Meta-programming}, 
+            author={Jason Z. S. Hu and Brigitte Pientka},
+            year={2024},
+            eprint={2404.17065},
+            archivePrefix={arXiv},
+            primaryClass={cs.LO}
+      }
   - title: Layered Modal Type Theories
     year: 2023
     authors: Jason Hu and Brigitte Pientka
