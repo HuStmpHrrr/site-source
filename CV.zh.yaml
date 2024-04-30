@@ -292,7 +292,7 @@ publications:
       }
 
 techreports:
-  - title: DeLaM: A Dependent Layered Modal Type Theory for Meta-programming
+  - title: "DeLaM: A Dependent Layered Modal Type Theory for Meta-programming"
     year: 2024
     authors: Jason Hu and Brigitte Pientka
     doi: https://arxiv.org/abs/2404.17065
