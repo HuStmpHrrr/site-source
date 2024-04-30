@@ -164,6 +164,21 @@ publications:
     authors: Jason Hu and Brigitte Pientka
     artifact: /esop2024/
     pdf: /asset/papers/esop24.pdf
+    slides: /asset/slides/esop24.pdf
+    doi: https://doi.org/10.1007/978-3-031-57262-3_3
+    bibtex: |
+      @InProceedings{10.1007/978-3-031-57262-3_3,
+          author={Hu, Jason Z. S.
+          and Pientka, Brigitte},
+          editor={Weirich, Stephanie},
+          title={Layered Modal Type Theory: Where Meta-programming Meets Intensional Analysis},
+          booktitle={Programming Languages and Systems},
+          year={2024},
+          publisher={Springer Nature Switzerland},
+          address={Cham},
+          pages={52--82},
+          isbn={978-3-031-57262-3}
+      }
   - title: Normalization by Evaluation for Modal Dependent Type Theory
     appearance: JFP
     year: 2023
