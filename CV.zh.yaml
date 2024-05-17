@@ -69,7 +69,7 @@ education:
         slides: /asset/pdf/proposal-slides.pdf
     thesis:
       title: Foundations and Applications of Modal Type Theories
-      decription: >-
+      description: >-
         研究不同类型的模态类型论及其在元编程领域的应用
 
   - school: 滑铁卢大学
