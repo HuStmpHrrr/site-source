@@ -72,7 +72,10 @@ education:
         name: Thesis Proposal and Area Examination
         report: /asset/pdf/proposal.pdf
         slides: /asset/pdf/proposal-slides.pdf
-
+    thesis:
+      title: Foundations and Applications of Modal Type Theories
+      decription: >-
+        A series of studies of modal type theories in different styles, with applications in meta-programming
         
   - school: University of Waterloo
     location: Waterloo, ON
