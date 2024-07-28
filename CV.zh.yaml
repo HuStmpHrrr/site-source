@@ -71,6 +71,7 @@ education:
       title: Foundations and Applications of Modal Type Theories
       description: >-
         研究不同类型的模态类型论及其在元编程领域的应用
+      code: https://hustmphrrr.github.io/mech-type-theories/
 
   - school: 滑铁卢大学
     location: 加拿大，安大略省，滑铁卢

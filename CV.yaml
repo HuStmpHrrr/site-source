@@ -76,6 +76,7 @@ education:
       title: Foundations and Applications of Modal Type Theories
       description: >-
         A series of studies of modal type theories in different styles, with applications in meta-programming
+      code: https://hustmphrrr.github.io/mech-type-theories/
         
   - school: University of Waterloo
     location: Waterloo, ON
