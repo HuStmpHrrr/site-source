@@ -183,6 +183,7 @@ publications:
     authors: Jason Hu, Junyoung Jang, Brigitte Pientka
     pdf: /asset/papers/jfp23.pdf
     doi: https://doi.org/10.1017/S0956796823000060
+    slides: /asset/slides/icfp24.pdf
     artifact: /Kripke-style/
     bibtex: |
       @article{hu_jang_pientka_2023,
