@@ -72,6 +72,36 @@ education:
       description: >-
         研究不同类型的模态类型论及其在元编程领域的应用
       code: https://hustmphrrr.github.io/mech-type-theories/
+      abstract: >-
+        Over the past few decades, type theories as mathematical foundations have been
+        extensively studied and are well understood. Many proof assistants implement
+        type theories and have found important applications to provide critical
+        security guarantees. In these applications, users often write meta-programs,
+        programs that generate other programs, to implement proof search heuristics
+        and improve their work efficiency. However, as opposed to the deep
+        understanding of type theories, it remains unclear what foundation is suitable
+        to support meta-programming in proof assistants. In this thesis, I investigate
+        modal type theories, a specific approach to this problem. In modal type
+        theories, modalities are a way to shallowly embed syntax into the systems, so
+        users can write meta-programs that manipulate syntax through these modalities.
+
+        I explore two different styles of modal systems. In the first part, I
+        investigate the Kripke-style systems, which faithfully model the familiar
+        quasi-quoting style of meta-programming. I develop an explicit substitution
+        calculus and scale it to dependent types, introducing Mint. I prove strong
+        normalization of Mint, which implies its logical consistency, using an untyped
+        domain model.
+
+        Nevertheless, the Kripke-style systems only support composition and execution
+        of code, and they cannot easily support a general recursion principle on the
+        structure of code. To support such a general recursion principle, I develop
+        the layered style, where a system is divided into nested layers of
+        sub-languages. The layered style scales quite naturally to dependent types,
+        introducing DeLaM. DeLaM allows users to compose, execute and recurse on
+        dependently typed code. I prove that DeLaM is weakly normalizing and its
+        convertibility problem between types and terms is decidable. Hence, DeLaM
+        provides a type-theoretic foundation to support type-safe meta-programming in
+        proof assistants.
 
   - school: 滑铁卢大学
     location: 加拿大，安大略省，滑铁卢
