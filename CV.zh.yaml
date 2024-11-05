@@ -12,7 +12,9 @@ social:
   stack-overflow: https://stackoverflow.com/users/3040064/jason-hu
   zhihu: https://www.zhihu.com/people/jason-hu-42-79/activities
 description: >-
-  我现在是<a href="https://www.cs.mcgill.ca/">麦吉尔大学</a>的博士研究生，我的导师是<a
+  我现在已作为应用科学家入职AWS！
+  
+  我即将从<a href="https://www.cs.mcgill.ca/">麦吉尔大学</a>获得博士学位！我的博士导师是<a
   href="https://www.cs.mcgill.ca/~bpientka/" class="keep-space">Brigitte Pientka</a>教
   授。我此前在<a href="https://plg.uwaterloo.ca/">滑铁卢大学</a>读计算机的数学硕士，导
   师是<a href="https://plg.uwaterloo.ca/~olhotak/" class="keep-space">Ondřej
@@ -452,6 +454,14 @@ activities:
     description: 带奖学金
 
 industry:
+  - company: 亚马逊云科技
+    location: 美国，华盛顿州，西雅图
+    position: Applied Scientist II
+    span:
+      from:
+        month: 11
+        year: 2024
+      to: present
   - company: 亚马逊云科技
     location: 美国，明尼苏达，明尼亚波利斯
     position: Applied Scientist Intern

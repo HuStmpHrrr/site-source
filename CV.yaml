@@ -13,7 +13,9 @@ social:
   stack-overflow: https://stackoverflow.com/users/3040064/jason-hu
   zhihu: https://www.zhihu.com/people/jason-hu-42-79/activities
 description: >-
-  I am currently a PhD student at <a href="https://www.cs.mcgill.ca/">McGill
+  I have joined Amazon Web Services as an applied scientist in November 2024!
+  
+  I almost(!, defence-only) obtain my PhD from <a href="https://www.cs.mcgill.ca/">McGill
   University</a>, under the supervision of Professor <a
   href="https://www.cs.mcgill.ca/~bpientka/">Brigitte Pientka</a>.  I did my Master of
   Mathematics at the <a href="https://plg.uwaterloo.ca/">University of Waterloo</a>,
@@ -461,6 +463,14 @@ activities:
     description: with fellowship
 
 industry:
+  - company: Amazon Web Services
+    location: Seattle, WA
+    position: Applied Scientist II
+    span:
+      from:
+        month: 11
+        year: 2024
+      to: present
   - company: Amazon Web Services
     location: Minneapolis, MN
     position: Applied Scientist Intern
