@@ -188,6 +188,11 @@ education:
         year: 2014
 
 publications:
+  - title: "A Dependent Type Theory for Meta-programming with Intensional Analysis"
+    appearance: POPL'25
+    year: 2025
+    authors: Jason Hu and Brigitte Pientka
+    doi: https://doi.org/10.1145/3704851
   - title: "Layered Modal Type Theory: Where Meta-programming Meets Intensional Analysis"
     appearance: ESOP'24
     year: 2024
