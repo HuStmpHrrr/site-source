@@ -193,6 +193,19 @@ publications:
     year: 2025
     authors: Jason Hu and Brigitte Pientka
     doi: https://doi.org/10.1145/3704851
+    slides: /asset/slides/popl25.pdf
+    bibtex: |
+      @article{delampopl,
+        author       = {Jason Z. S. Hu and
+                        Brigitte Pientka},
+        title        = {A Dependent Type Theory for Meta-programming with Intensional Analysis},
+        journal      = {Proc. {ACM} Program. Lang.},
+        number       = {{POPL}},
+        year         = {2025},
+        volume = {9},
+        url = {https://doi.org/10.1145/3704851},
+      }
+
   - title: "Layered Modal Type Theory: Where Meta-programming Meets Intensional Analysis"
     appearance: ESOP'24
     year: 2024
