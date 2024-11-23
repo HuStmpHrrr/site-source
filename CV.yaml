@@ -15,8 +15,8 @@ social:
 description: >-
   I have joined Amazon Web Services as an applied scientist in November 2024!
   
-  I almost(!, defence-only) obtain my PhD from <a href="https://www.cs.mcgill.ca/">McGill
-  University</a>, under the supervision of Professor <a
+  I obtained my PhD from <a href="https://www.cs.mcgill.ca/">McGill
+  University</a>, under the gentle and careful eyes of Professor <a
   href="https://www.cs.mcgill.ca/~bpientka/">Brigitte Pientka</a>.  I did my Master of
   Mathematics at the <a href="https://plg.uwaterloo.ca/">University of Waterloo</a>,
   supervised by Professor <a href="https://plg.uwaterloo.ca/~olhotak/">Ondřej
@@ -51,7 +51,9 @@ education:
       from:
         month: 9
         year: 2019
-      to: present
+      to:
+        month: 11
+        year: 2024
     courses:
       - code: COMP 550
         name: Natural Language Processing
@@ -79,6 +81,7 @@ education:
       description: >-
         A series of studies of modal type theories in different styles, with applications in meta-programming
       code: https://hustmphrrr.github.io/mech-type-theories/
+      slides: /asset/slides/defense.pdf
       abstract: >-
         Over the past few decades, type theories as mathematical foundations have been
         extensively studied and are well understood. Many proof assistants implement

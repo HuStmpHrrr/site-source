@@ -14,7 +14,7 @@ social:
 description: >-
   我现在已作为应用科学家入职AWS！
   
-  我即将从<a href="https://www.cs.mcgill.ca/">麦吉尔大学</a>获得博士学位！我的博士导师是<a
+  我已经从<a href="https://www.cs.mcgill.ca/">麦吉尔大学</a>获得博士学位！我的博士导师是<a
   href="https://www.cs.mcgill.ca/~bpientka/" class="keep-space">Brigitte Pientka</a>教
   授。我此前在<a href="https://plg.uwaterloo.ca/">滑铁卢大学</a>读计算机的数学硕士，导
   师是<a href="https://plg.uwaterloo.ca/~olhotak/" class="keep-space">Ondřej
@@ -46,7 +46,9 @@ education:
       from:
         month: 9
         year: 2019
-      to: present
+      to:
+        month: 11
+        year: 2024
     courses:
       - code: COMP 550
         name: Natural Language Processing
@@ -74,6 +76,7 @@ education:
       description: >-
         研究不同类型的模态类型论及其在元编程领域的应用
       code: https://hustmphrrr.github.io/mech-type-theories/
+      slides: /asset/slides/defense.pdf
       abstract: >-
         Over the past few decades, type theories as mathematical foundations have been
         extensively studied and are well understood. Many proof assistants implement
