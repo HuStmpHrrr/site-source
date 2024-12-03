@@ -75,6 +75,7 @@ education:
         研究不同类型的模态类型论及其在元编程领域的应用
       code: https://hustmphrrr.github.io/mech-type-theories/
       slides: /asset/slides/defense.pdf
+      link: /asset/pdf/thesis.pdf
       abstract: >-
         Over the past few decades, type theories as mathematical foundations have been
         extensively studied and are well understood. Many proof assistants implement

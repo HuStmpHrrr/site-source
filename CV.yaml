@@ -80,6 +80,7 @@ education:
         A series of studies of modal type theories in different styles, with applications in meta-programming
       code: https://hustmphrrr.github.io/mech-type-theories/
       slides: /asset/slides/defense.pdf
+      link: /asset/pdf/thesis.pdf
       abstract: >-
         Over the past few decades, type theories as mathematical foundations have been
         extensively studied and are well understood. Many proof assistants implement
