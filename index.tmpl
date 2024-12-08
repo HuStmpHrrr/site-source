@@ -248,6 +248,10 @@
                                         <a class="bibtex" href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="{{entry.bibtex}}">(bibtex)</a>
                                     {% endif %}
                                 </div>
+                                {% if entry.description is defined %}
+                                    <p>{{entry.description}}</p>
+                                {% endif %}
+
                                 {% if entry.abstract is defined %}
                                     <div style="min-width: 300px;">
                                         <div class="abstract-hideshow" data-toggle="tooltip" data-placement="left" title="Click me">Abstract</div>

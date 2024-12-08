@@ -214,6 +214,30 @@ publications:
         url = {https://doi.org/10.1145/3704851},
       }
 
+  - title: "A Layered Approach to Intensional Analysis in Type Theory"
+    appearance: TOPLAS
+    year: 2024
+    authors: Jason Hu and Brigitte Pientka
+    artifact: /esop2024/
+    pdf: https://dl.acm.org/doi/pdf/10.1145/3707203
+    doi: https://doi.org/10.1145/3707203
+    description: extended version of ESOP'24
+    bibtex: |
+      @article{10.1145/3707203,
+        author = {Hu, Jason Z. S. and Pientka, Brigitte},
+        title = {A Layered Approach to Intensional Analysis in Type Theory},
+        year = {2024},
+        publisher = {Association for Computing Machinery},
+        address = {New York, NY, USA},
+        issn = {0164-0925},
+        url = {https://doi.org/10.1145/3707203},
+        doi = {10.1145/3707203},
+        note = {Just Accepted},
+        journal = {ACM Trans. Program. Lang. Syst.},
+        month = dec,
+        keywords = {modal type theory, contextual types, meta-programming, normalization by evaluation, presheaf model}
+      }
+      
   - title: "Layered Modal Type Theory: Where Meta-programming Meets Intensional Analysis"
     appearance: ESOP'24
     year: 2024
