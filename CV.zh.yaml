@@ -374,6 +374,14 @@ publications:
       }
 
 techreports:
+  - title: "McTT: Building A Correct-By-Construction Proof Checker For Martin-Löf Type Theory"
+    appearance: WITS'25
+    year: 2025
+    authors: Junyoung Jang, Jason Hu, Antoine Gaulin and Brigitte Pientka
+    artifact: https://beluga-lang.github.io/McTT/
+    pdf: /asset/papers/wits25.pdf
+    description: extended abstract
+
   - title: "DeLaM: A Dependent Layered Modal Type Theory for Meta-programming"
     year: 2024
     authors: Jason Hu and Brigitte Pientka
