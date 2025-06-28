@@ -200,10 +200,12 @@ publications:
     appearance: ICFP'25
     year: 2025
     authors: Shengyi Jiang, Jason Hu, Bruno C. d. S. Oliveira
-  - title: "McTT: A Correct-By-Construction Kernel for a Proof Assistant"
+    artifact: /mech-type-theories/
+  - title: "McTT: A Verified Kernel for a Proof Assistant"
     appearance: ICFP'25
     year: 2025
     authors: Junyoung Jang, Antoine Gaulin, Jason Hu, Brigitte Pientka
+    artifact: https://github.com/Beluga-lang/McTT
   - title: "A Dependent Type Theory for Meta-programming with Intensional Analysis"
     appearance: POPL'25
     year: 2025
