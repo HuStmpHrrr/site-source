@@ -194,12 +194,14 @@ publications:
     appearance: ICFP'25
     year: 2025
     authors: Shengyi Jiang, Jason Hu, Bruno C. d. S. Oliveira
-    artifact: /mech-type-theories/
+    artifact: /mech-type-theories/release/icfp25/
+    doi: https://doi.org/10.1145/3747508
+    pdf: /asset/papers/icfp25-nbe.pdf
   - title: "McTT: A Verified Kernel for a Proof Assistant"
     appearance: ICFP'25
     year: 2025
     authors: Junyoung Jang, Antoine Gaulin, Jason Hu, Brigitte Pientka
-    artifact: https://github.com/Beluga-lang/McTT
+    artifact: https://beluga-lang.github.io/McTT/icfp25/
   - title: "A Dependent Type Theory for Meta-programming with Intensional Analysis"
     appearance: POPL'25
     year: 2025
