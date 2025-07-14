@@ -203,7 +203,7 @@ publications:
     authors: Junyoung Jang, Antoine Gaulin, Jason Hu, Brigitte Pientka
     artifact: https://beluga-lang.github.io/McTT/icfp25/
     doi: https://doi.org/10.1145/3747511
-    pdf:  /aaset/papers/icfp25-mctt.pdf
+    pdf: /asset/papers/icfp25-mctt.pdf
   - title: "A Dependent Type Theory for Meta-programming with Intensional Analysis"
     appearance: POPL'25
     year: 2025
