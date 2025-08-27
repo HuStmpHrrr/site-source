@@ -203,6 +203,24 @@ publications:
     artifact: /mech-type-theories/release/icfp25/
     doi: https://doi.org/10.1145/3747508
     pdf: /asset/papers/icfp25-nbe.pdf
+    bibtex: |
+      @article{noncumuicfp,
+          author = {Jiang, Shengyi and Hu, Jason Z. S. and Oliveira, Bruno C. d. S.},
+          title = {Normalization by Evaluation for Non-cumulativity},
+          year = {2025},
+          issue_date = {August 2025},
+          publisher = {Association for Computing Machinery},
+          address = {New York, NY, USA},
+          volume = {9},
+          number = {ICFP},
+          url = {https://doi.org/10.1145/3747508},
+          doi = {10.1145/3747508},
+          journal = {Proc. ACM Program. Lang.},
+          month = aug,
+          articleno = {239},
+          numpages = {35},
+          keywords = {Dependent Types, Logical Relations, Normalization by Evaluation, Type Theory}
+      }
   - title: "McTT: A Verified Kernel for a Proof Assistant"
     appearance: ICFP'25
     year: 2025
@@ -210,6 +228,24 @@ publications:
     artifact: https://beluga-lang.github.io/McTT/icfp25/
     doi: https://doi.org/10.1145/3747511
     pdf: /asset/papers/icfp25-mctt.pdf
+    bibtex: |
+      @article{mctticfp,
+          author = {Jang, Junyoung and Gaulin, Antoine and Hu, Jason Z. S. and Pientka, Brigitte},
+          title = {McTT: A Verified Kernel for a Proof Assistant},
+          year = {2025},
+          issue_date = {August 2025},
+          publisher = {Association for Computing Machinery},
+          address = {New York, NY, USA},
+          volume = {9},
+          number = {ICFP},
+          url = {https://doi.org/10.1145/3747511},
+          doi = {10.1145/3747511},
+          journal = {Proc. ACM Program. Lang.},
+          month = aug,
+          articleno = {242},
+          numpages = {32},
+          keywords = {Martin-L\"{o}f Type Theory, Normalization-by-Evaluation, Rocq, Type Theory, Verified Implementation}
+      }
   - title: "A Dependent Type Theory for Meta-programming with Intensional Analysis"
     appearance: POPL'25
     year: 2025
