@@ -190,6 +190,25 @@ education:
         year: 2014
 
 publications:
+  - title: "The Agda standard library: version 2.0"
+    apperance: JOSS (Dec 25)
+    authors: Matthew L. Daggitt, Guillaume Allais, James McKinna, Andreas Abel, Nathan van Doorn, James Wood, Ulf Norell, Donnacha Oisín Kidney, Sergei Meshveliani, Sandro Stucki, Jacques Carette, Alex Rice, Jason Z. S. Hu, Li-yao Xia, Shu-Hung You, Reed Mullanix, and Wen Kokke
+    artifact: https://github.com/agda/agda-stdlib/tree/v2.0-joss-submission
+    doi: https://doi.org/10.21105/joss.09241
+    pdf: https://www.theoj.org/joss-papers/joss.09241/10.21105.joss.09241.pdf
+    bibtex: |
+      @article{Daggitt2025,
+      doi = {10.21105/joss.09241},
+      url = {https://doi.org/10.21105/joss.09241},
+      year = {2025},
+      publisher = {The Open Journal},
+      volume = {10},
+      number = {116},
+      pages = {9241},
+      author = {Daggitt, Matthew L. and Allais, Guillaume and McKinna, James and Abel, Andreas and Nathan, Van Doorn, and Wood, James and Norell, Ulf and Kidney, Donnacha Oisín and Meshveliani, Sergei and Stucki, Sandro and Carette, Jacques and Rice, Alex and Hu, Jason Z. s. and Xia, Li-yao and You, Shu-Hung and Mullanix, Reed and Kokke, Wen},
+      title = {The Agda standard library: version 2.0},
+      journal = {Journal of Open Source Software}
+      } 
   - title: "Normalization by Evaluation for Non-cumulativity"
     appearance: ICFP'25
     year: 2025
