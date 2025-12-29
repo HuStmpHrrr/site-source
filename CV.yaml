@@ -198,7 +198,7 @@ education:
 publications:
   - title: "The Agda standard library: version 2.0"
     year: 2025
-    apperance: JOSS (Dec 25)
+    appearance: JOSS (Dec 25)
     authors: Matthew L. Daggitt, Guillaume Allais, James McKinna, Andreas Abel, Nathan van Doorn, James Wood, Ulf Norell, Donnacha Oisín Kidney, Sergei Meshveliani, Sandro Stucki, Jacques Carette, Alex Rice, Jason Z. S. Hu, Li-yao Xia, Shu-Hung You, Reed Mullanix, and Wen Kokke
     artifact: https://github.com/agda/agda-stdlib/tree/v2.0-joss-submission
     doi: https://doi.org/10.21105/joss.09241
